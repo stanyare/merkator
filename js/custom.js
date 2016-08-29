@@ -209,6 +209,24 @@ $(function(){
 	};
 	/* fancybox */
 
+	/*aside*/
+	$('.js-item').on('click', function(){
+		$(this).find('.js-sub-list').slideToggle();
+	});
+	/* product slider */	
+	if($('.js-product').length){
+		$('.js-product').slick({
+		  /*appendArrows: $(".slick-arrow-wrap"),*/
+		  prevArrow: '<div class="slick-arrow-wrap"><button type="button" class="slick-prev">Previous</button></div>',
+		  dots: false,
+		  infinite: true,
+		  speed: 1000,
+		  slidesToShow: 1,
+		  slidesToScroll: 1
+
+		});
+	};
+
 });
 
 var handler = function(){

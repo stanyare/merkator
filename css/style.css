@@ -1139,8 +1139,173 @@ footer{
 	padding: 0 5px 8px 0;
 }
 
+/*
+================================================================================
+|                                    PRODUCT                                   |
+================================================================================
+*/
+.inner-page .main-wrapper {
+	padding: 0px 27px 0px 20px;
+}
+.inner-page header {
+	top: 0;
+	box-shadow: 0 3px 7px 0 rgba(0,0,0,0.15);
+}
+.inner-page p {
+	font-weight: 350;
+}
+aside {
+	width: 400px;
+	padding-top: 140px;
+	float: left;
+	position: relative;
+    z-index: 1;
+}
+.inner-page main {
+	margin: 0 0 0 -400px;
+	padding: 0 0 0 420px;
+	float: left;
+}
+.aside__list {
+	list-style-type: none;
+}
+.aside__item {
+	display: block;
+	width: 100%;
+	border: 1px solid #e6e6e6;
+}
+.aside__link {
+	color: #000;
+	text-transform: uppercase;
+	display: block;
+	font-size: 24px;
+	line-height: 26px;
+	font-weight: 400;
+}
+.aside__link span {
+	display: table-cell;
+	vertical-align: middle;
+	height: 125px;
+	padding-left: 40px;
+}
+.aside__item.active .aside__link, .aside__link:hover {
+	background-color: #f36f21;
+	color: #fff;
 
+}
+.aside__item .aside__list_sub .aside__link {
+	background-color: #f7f7f3;
+	color: #000;
+	text-transform: none;
+	font-size: 16px;
+	line-height: 20px;
+}
+.aside__item .aside__list_sub .aside__link:hover {
+	background-color: #ebebe6;
+}
+.aside__item .aside__list_sub .aside__link span {
+	height: 108px;
+}
+.aside__list_sub {
+	display: none;
+}
+/* BREAD CRUMBS */
+.bread-crambs {
+	background-color: #f7f7f3;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+.bread-crambs__item {
+	display: inline-block;
+	list-style-type: none;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 350;
+}
+.bread-crambs__link {
+	vertical-align: middle;
 
+}
+.bread-crambs__item:before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	width: 3px;
+	height: 3px;
+	border-radius: 50%;
+	background: #f36f21;
+	margin: 0 9px;
+}
+.bread-crambs__item:first-child:before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	width: 15px;
+	height: 20px;
+	border-radius: 0;
+	background: url('../img/bc_home.png');
+    margin: 0 14px 0 0;
+}
+/* END BREAD CRUMBS */
+
+.box-slider_product {
+	height: 403px;
+	margin-bottom: 40px;
+}
+.box-slider_product .slider-description {
+	padding: 0 40px;
+	width: 553px;
+	height: 203px;
+	background: #00734a;
+}
+.box-slider_product .slider-description-text {
+	padding: 0;
+}
+.box-slider_product .slider-description-text__cont{
+	height: 203px;
+}
+.box-slider_product .slide-title {
+	color: #fff;
+	font-family: 'HeliosCond', sans-serif;
+	font-size: 39px;
+	font-weight: 400;
+	line-height: 45px;
+}
+.box-slider_product .slick-arrow {
+    background:initial;
+    background-color: rgba(0,0,0,0.35);
+    bottom: 0px;
+    top: initial;
+    width: 40px;
+    height: 40px;
+    z-index: 3;
+}
+.box-slider_product .slider-wrap .slick-prev {
+	background: url(../img/icon_list.png) no-repeat left 0px;
+    left: 0px;
+    bottom: 0px;
+}
+.box-slider_product .slider-wrap .slick-next {
+	right: 553px;
+	left: initial;
+    bottom: 0px;
+}
+/* ADVANTAGES */
+.box-advantages {
+	padding: 25px 0;
+}
+.box-advantages h1{
+	font-size: 39px;
+	line-height: 42px;
+	font-weight: 400;
+	font-family: 'HeliosCond', sans-serif;
+	margin-bottom: 15px;
+}
+.box-slider_advantages {
+	height: 409px;
+}
+
+/* END ADVANTAGES */
 @media screen and (max-width:1500px){
 	.main-nav-list__item{
 		padding-left: 3%; 
