@@ -5,7 +5,9 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
 	<title>merkator - main</title>
+	<link rel="stylesheet" type="text/css" href="css/animate.css" />
 	<link rel="stylesheet" type="text/css" href="css/slick.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />	
 	<link rel="stylesheet" type="text/css" href="css/style.css" />		
 </head>
 <body class="main-page loaded">
@@ -36,6 +38,14 @@
 							</a>
 						</div>
 					</div>
+					<div class="box-timer">
+						<div class="box-timer-cont">
+							<div class="number-main-slide"></div>
+							<svg class="circleFill">
+								<circle cx="42" cy="42" r="41" stroke="#f36f21" stroke-width="3" fill="none"/>
+							</svg>
+						</div>
+					</div>
 				</div>
 				<div class="box-slider__item" style="background-image:url(img/slide_2.jpg)">
 					<div class="slider-description">
@@ -52,6 +62,14 @@
 							</a>
 						</div>
 					</div>
+					<div class="box-timer">
+						<div class="box-timer-cont">
+							<div class="number-main-slide">1 / 2</div>
+							<svg class="circleFill">
+								<circle cx="42" cy="42" r="41" stroke="#f36f21" stroke-width="3" fill="none"/>
+							</svg>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="slider-inf">
@@ -65,13 +83,13 @@
 				</div>
 			</div>
 			<div class="box-next-screen">
-				<a href="#" class="box-next-screen__link">
+				<a href="#services" class="box-next-screen__link anchor">
 					<span class="box-next-screen__icon"></span>
 					Далее
 				</a>
 			</div>
 		</div>
-		<section class="box-services clearfix">
+		<section class="box-services clearfix" id="services">
 			<ul class="box-services-list">
 				<li class="box-services-list__item">
 					<a href="#" class="box-services-list__link">
@@ -113,11 +131,20 @@
 						<span class="box-services-list__text">Обращение<br> с отходами</span>
 					</a>
 				</li>
-				<li class="box-services-list__item">
-					<a href="#" class="box-services-list__link">
+				<li class="box-services-list__item service-5">
+					<a href="#" class="box-services-list__link js-servise-5">
 						<span class="box-services-list__icon">
 							<span class="box-services-list__icon-cont">
-								<img src="img/service_5.png" alt="">
+								<span class="anim-img-wrap">
+									<span class="anim-block__car"></span>
+									<span class="anim-block__img_1 animated"></span>
+									<span class="anim-block__img_2 animated ad500"></span>
+									<span class="anim-block__img_3 animated ad1000"></span>
+									<span class="anim-block__img_4"></span>
+									<span class="circle_1 ad2000"></span>
+									<span class="circle_2 ad2000"></span>
+									<span class="circle_3 ad2000"></span>
+								</span>
 							</span>
 						</span>
 						<span class="box-services-list__text">Дополнительное<br> оборудование</span>
@@ -142,7 +169,7 @@
 					<a href="#" class="button button_green">Подробнее</a>
 				</div>
 				<div class="box-news-list">
-					<div class="numbers-news">1/7</div>
+					<div class="numbers-news"></div>
 					<div class="news-list js-news">
 						<article class="news-list__item">
 							<div class="news-list__date">01 августа 2016</div>
@@ -186,7 +213,7 @@
 		</section>
 		<section class="box-inf-bottom">
 			<div class="col-inf col-inf_1">
-				<a class="inf-video" href="#">
+				<a class="inf-video fancybox-media" href="http://www.youtube.com/watch?v=opj24KnzrWo">
 					<span class="inf-video__icon"></span>
 				</a>
 			</div>
@@ -222,23 +249,30 @@
 	<header>
 		<div class="wrapper">
 			<div class="logo"><a href="#"><img src="img/logo.png" alt=""></a></div>
-			<nav class="main-nav">
-				<ul class="main-nav-list">
-					<li class="main-nav-list__item"><a href="#" class="main-nav-list__link">О Холдинге</a></li>
-					<li class="main-nav-list__item active"><a href="#" class="main-nav-list__link">Техника</a></li>
-					<li class="main-nav-list__item"><a href="#" class="main-nav-list__link">Запасные части</a></li>
-					<li class="main-nav-list__item"><a href="#" class="main-nav-list__link">Сервис</a></li>
-					<li class="main-nav-list__item"><a href="#" class="main-nav-list__link">Новости</a></li>
-					<li class="main-nav-list__item"><a href="#" class="main-nav-list__link">Контакты</a></li>
-				</ul>
-			</nav>
-			<div class="box-search">
-				<a href="#" class="box-search__link">
-					<span class="box-search__icon"></span>
-				</a>
-			</div>
-			<div class="box-lang">
-				<a href="#" class="box-lang__link">EN</a>				
+			<a href="#" class="button-nav">
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
+			<div class="opened-block-nav">
+				<nav class="main-nav">
+					<ul class="main-nav-list">
+						<li class="main-nav-list__item"><a href="#" class="main-nav-list__link">О Холдинге</a></li>
+						<li class="main-nav-list__item active"><a href="#" class="main-nav-list__link">Техника</a></li>
+						<li class="main-nav-list__item"><a href="#" class="main-nav-list__link">Запасные части</a></li>
+						<li class="main-nav-list__item"><a href="#" class="main-nav-list__link">Сервис</a></li>
+						<li class="main-nav-list__item"><a href="#" class="main-nav-list__link">Новости</a></li>
+						<li class="main-nav-list__item"><a href="#" class="main-nav-list__link">Контакты</a></li>
+					</ul>
+				</nav>
+				<div class="box-search">
+					<a href="#" class="box-search__link">
+						<span class="box-search__icon"></span>
+					</a>
+				</div>
+				<div class="box-lang">
+					<a href="#" class="box-lang__link">EN</a>				
+				</div>
 			</div>
 		</div>
 	</header>
@@ -378,6 +412,7 @@
 	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>		
 	<script type="text/javascript" src="js/jquery-migrate.min.js" ></script>
 	<script type="text/javascript" src="js/slick.js" ></script>
+	<script type="text/javascript" src="js/jquery.fancybox.js" ></script>
 	<script type="text/javascript" src="js/custom.js" ></script>
 </body>
 </html>
