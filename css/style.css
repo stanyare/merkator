@@ -581,13 +581,13 @@ input.button, button.button{
 }
 .news-list{
 	padding: 0 0 0 0;
-	margin: 0 0 0 -40px;
+	margin: 0 -15px 0 -110px;
 	position: relative;
 }
 .news-list__item{
 	float: left;
 	padding: 0 0 0 0;
-	margin: 0 0 0 40px;
+	margin: 0 0 0 110px;
 }
 .news-list__date{
 	display: block;
@@ -600,15 +600,15 @@ input.button, button.button{
 }
 .box-news-list .slick-prev{
 	left: auto;
-	right: 376px; top: -67px;
+	right: 360px; top: -67px;
 }
 .box-news-list .slick-next{
 	left: auto;
-	right: 265px; top: -67px;
+	right: 245px; top: -67px;
 }
 .numbers-news{
 	position: absolute;
-	right: 285px;
+	right: 252px;
 	top: -44px;
 	width: 90px;
 	text-align: center;
@@ -647,9 +647,19 @@ input.button, button.button{
 	line-height: 20px;
 	font-family: 'HeliosCond';
 }
+.list_green .list__item a{
+	color: #037252;
+	font-size: 16px;
+	line-height: 20px;
+	font-family: 'HeliosCond';
+}
 .list_green .list__item:before{
 	background-position: left -17px;
 	top: 14px;
+	-moz-transition: all 0.4s linear; -o-transition: all 0.4s linear; -ms-transition: all 0.4s linear; -webkit-transition: all 0.4s linear; transition: all 0.4s linear;
+}
+.list_green .list__item:hover:before{
+	left: 10px;
 }
 .inf-about .list{
 	padding-top: 25px;
@@ -682,7 +692,7 @@ input.button, button.button{
 	border-radius: 50%;
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
-	background:url(../img/icon_play.png) no-repeat center center;
+	background:url(../img/icon_play.png) no-repeat 39px center;
 	-moz-transition: all 0.4s linear; -o-transition: all 0.4s linear; -ms-transition: all 0.4s linear; -webkit-transition: all 0.4s linear; transition: all 0.4s linear;
 }
 .inf-video:hover .inf-video__icon{
@@ -992,11 +1002,12 @@ svg.circleFill {
 	max-width: 100%;
 }
 .col-news_33{
-	width: 33.333333%;
+	width: 32.5%;
 	padding-top: 30px;
+	padding-right: 8%;
 }
 .col-news_66{
-	width: 66.666666%;
+	width: 67.5%;
 }
 
 
@@ -1394,6 +1405,14 @@ aside {
 	}
 	.box-news-list .slick-prev{
 		right: 316px;
+	}
+	
+	.news-list{
+		margin-left: -40px;
+		margin-right: 0px;
+	}
+	.news-list__item{
+		margin-left: 40px;
 	}
 }
 

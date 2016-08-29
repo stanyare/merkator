@@ -42,11 +42,10 @@ $(function(){
 		var $numberMain = $('.number-main-slide');
 		var $slickMain = $('.js-slider');
 
-		$slickMain.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-			//currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+		/*$slickMain.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {			
 			var i = (currentSlide ? currentSlide : 0) + 1;
 			$numberMain.text(i + '/' + slick.slideCount);
-		});
+		});*/
 	
 		$slickMain.slick({
 			infinite: true,
