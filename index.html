@@ -23,7 +23,8 @@
 	
 		<div class="box-slider">
 			<div class="slider-wrap js-slider">
-				<div class="box-slider__item" style="background-image:url(img/slide_1.jpg)">
+				<div class="box-slider__item">
+					<div class="box-slider__img" style="background-image:url(img/slide_1.jpg)"></div>
 					<div class="slider-description">
 						<div class="slider-description-text">
 							<div class="slider-description-text__cont">
@@ -47,7 +48,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="box-slider__item" style="background-image:url(img/slide_2.jpg)">
+				<div class="box-slider__item">
+					<div class="box-slider__img" style="background-image:url(img/slide_2.jpg)"></div>
 					<div class="slider-description">
 						<div class="slider-description-text">
 							<div class="slider-description-text__cont">
@@ -76,9 +78,9 @@
 				<div class="text-title"><img src="img/text_img.png" alt=""></div>
 				<div class="box-list-slider">
 					<ul class="list">
-						<li class="list__item">Заявка на запасные части</li>
-						<li class="list__item">Заявка на ТО и ремонт</li>
-						<li class="list__item">Гарантийный случай</li>
+						<li class="list__item"><a href="#">Заявка на запасные части</a></li>
+						<li class="list__item"><a href="#">Заявка на ТО и ремонт</a></li>
+						<li class="list__item"><a href="#">Гарантийный случай</a></li>
 					</ul>
 				</div>
 			</div>
@@ -269,15 +271,23 @@
 						<li class="main-nav-list__item"><a href="#" class="main-nav-list__link">Новости</a></li>
 						<li class="main-nav-list__item"><a href="#" class="main-nav-list__link">Контакты</a></li>
 					</ul>
+					<div class="search-form">
+						<form>
+							<div class="search-form__field">
+								<input type="text" placeholder="Search">
+							</div>
+						</form>
+					</div>
 				</nav>
 				<div class="box-search">
-					<a href="#" class="box-search__link">
+					<a href="#" class="box-search__link js-search">
 						<span class="box-search__icon"></span>
 					</a>
 				</div>
 				<div class="box-lang">
 					<a href="#" class="box-lang__link">EN</a>				
 				</div>
+				
 			</div>
 		</div>
 	</header>

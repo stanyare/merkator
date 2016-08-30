@@ -52,7 +52,7 @@ $(function(){
 			dots: false,
 			autoplay: true,
 			autoplaySpeed: 5000,
-			speed: 1000,
+			speed: 700,
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			fade: true,
@@ -193,6 +193,18 @@ $(function(){
 		});
 	};
 	/* fancybox */
+	
+	/* box search */
+	$('.js-search').click(function() {		
+		$(".search-form").toggleClass("opened-search");
+		return false;
+	});
+	$(document).click(function(e){
+		if ($(e.target).parents().filter('.search-form:visible').length != 1) {
+			$('.search-form').removeClass("opened-search");
+		}
+	});
+	/* box search */
 
 	/*aside*/
 	$('.js-item').on('click', function(){
@@ -222,6 +234,9 @@ var handler = function(){
 	
 	var height_col = $('.col-inf_2').height();
 	$('.col-inf_1, .col-inf_3').height(height_col);
+	
+	var widthNav = $('.main-nav-list').width();
+	$('.search-form').width(widthNav-38);
 	
 	var viewport_wid = viewport().width;
 	

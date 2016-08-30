@@ -229,6 +229,8 @@ header .wrapper{
 	float: right;
 	padding: 0 0 0 0;
 	width: 118px; height: 120px;
+	position: relative;
+	z-index: 1;
 }
 .box-search__link{
 	display: block;
@@ -249,6 +251,41 @@ header .wrapper{
 }
 .box-search__link:hover .box-search__icon{
 	background-position: left bottom;
+}
+.main-nav{
+	position: relative;
+	overflow: hidden;
+}
+.search-form{
+	position: absolute;
+	right: -400%; top: 0px;
+	width: 100%;
+	height: 120px;
+	-moz-transition: all 0.5s linear; -o-transition: all 0.5s linear; -ms-transition: all 0.5s linear; -webkit-transition: all 0.5s linear; transition: all 0.5s linear;
+}
+.opened-search{
+	right: 120px;
+}
+.search-form form{
+	height: 100%;
+}
+.search-form__field{
+	width: 100%;
+	height: 100%;
+	background: #FFF;
+}
+.search-form__field input{
+	display: block;
+	background: none;
+	border: none;
+	width: 100%;
+	height: 100%;
+	padding: 15px 20px 15px 20px;
+	color: #000;
+	font-family: 'Helios';
+	font-size: 18px;
+	line-height: 21px;
+	font-weight: 350;
 }
 .box-lang{
 	position: absolute;
@@ -339,10 +376,41 @@ header .wrapper{
 .box-slider__item{
 	width: 100%;
 	height: 100%;
-	position: relative;
+	position: relative;	
+	background:rgba(0,0,0,0.8) url(../img/services-decorate.png) repeat left top;
+}
+
+.box-slider__img{
+	position: absolute;
+	left: 0; right: auto; top: 0px;
+	width: 0;
+	height: 100%;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	-moz-transition: all 0.3s 1.5s linear; -o-transition: all 0.3s 1.5s linear; -ms-transition: all 0.3s 1.5s linear; -webkit-transition: all 0.3s 1.5s linear; transition: all 0.3s 1.5s linear;
+}
+.box-slider__img:before{
+	display: block;
+	content: '';
+	position: absolute;
+	left: 0px; top: 0px;
+	width: 100%;
+	height: 100%;
+	background:url(../img/bg_list_header.png) repeat left top;
+}
+.slick-active .box-slider__img{
+	left:auto;
+	right: 0px;
+	width: 100%;
+	
+}
+.loaded .slick-active  .box-slider__img{
+	left: 0; right: auto; top: 0px;
+	width: 0;
+	height: 100%;
+	background-position: 
+	-moz-transition: all 0.3s 0.1s linear; -o-transition: all 0.3s 0.1s linear; -ms-transition: all 0.3s 0.1s linear; -webkit-transition: all 0.3s 0.1s linear; transition: all 0.3s 0.1s linear;
 }
 .slick-list, .slick-track{
 	height: 100%;
@@ -377,8 +445,8 @@ header .wrapper{
 }
 .slider-inf{
 	position: absolute;
-	right: 0px; top: 0px;
-	background: #f36f21;
+	right: 0px; top: 0px;	
+	background: #f36f21 url(../img/bg_list_header.png) repeat left top;
 	width: 402px;
 	padding: 200px 20px 47px 20px;
 }
@@ -407,6 +475,13 @@ header .wrapper{
 	text-transform: uppercase;
 	font-weight: 350;
 }
+.list__item a{
+	font-size: 18px;
+	line-height: 21px;
+	color: #FFF;
+	text-transform: uppercase;
+	font-weight: 350;
+}
 .list__item:before{
 	display: block;
 	content: '';
@@ -414,6 +489,10 @@ header .wrapper{
 	position: absolute;
 	left: 0px; top: 16px;
 	background:url(../img/icon_list.png) no-repeat left top;
+	-moz-transition: all 0.4s linear; -o-transition: all 0.4s linear; -ms-transition: all 0.4s linear; -webkit-transition: all 0.4s linear; transition: all 0.4s linear;
+}
+.list__item:hover:before{
+	left: 10px;
 }
 .box-next-screen{
 	position: absolute;
@@ -515,6 +594,7 @@ input.button, button.button{
 
 .box-services{
 	padding: 0 0 0 0;
+	background:#00734a url(../img/services-decorate.png) repeat left top;
 }
 .box-services-list{
 	padding: 0 0 0 0;
@@ -540,7 +620,6 @@ input.button, button.button{
 	height: 298px;
 	padding: 30px 60px 30px 60px;
 	position: relative;
-	background: #00734a;
 }
 .box-services-list__link:hover{
 	background: #f36f21;
@@ -1659,6 +1738,12 @@ aside {
 	}
 	.news-list{
 		margin-left: -20px;
+	}
+	.search-form{
+		width: 100%!important;
+	}	
+	.opened-search{
+		right: 0px;
 	}
 }
 
