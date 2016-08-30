@@ -4,7 +4,12 @@ $(window).load(function(){
 	} else{
 		
 	};
-	$('body').removeClass('loaded'); 	
+	$('body').removeClass('loaded'); 
+	$('body').addClass('load-finished'); 
+	setTimeout(function() {
+		$('body').removeClass('load-finished'); 
+		$('body').addClass('load-animate'); 
+	}, 1000);
 });
 /* viewport width */
 function viewport(){
@@ -51,8 +56,8 @@ $(function(){
 			infinite: true,
 			dots: false,
 			autoplay: true,
-			autoplaySpeed: 10000,
-			speed: 1000,
+			autoplaySpeed: 5000,
+			speed: 400,
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			fade: true,
@@ -144,28 +149,111 @@ $(function(){
 	});
 	/* scroll to screen */
 	
+	/* icon-service-1 */
+	$(".js-servise-1").hover(
+		function() {
+			$(".anim-block__img_1", this).addClass("bounceInLeft");
+			$(".anim-block__img_2", this).addClass("bounceInLeft");
+			$(".anim-block__img_3", this).addClass("bounceInRight");
+			$(".circle_1", this).addClass("animrotate");
+			$(".circle_2", this).addClass("animrotate");			
+		},
+		function() {
+			$(".anim-block__img_1", this).removeClass("bounceInLeft");
+			$(".anim-block__img_2", this).removeClass("bounceInLeft");
+			$(".anim-block__img_3", this).removeClass("bounceInRight");		
+			$(".circle_1", this).removeClass("animrotate");
+			$(".circle_2", this).removeClass("animrotate");			
+		}
+	);
+	/* icon-service-1 */
+	/* icon-service-2 */
+	$(".js-servise-2").hover(
+		function() {
+			$(".anim-block__img_1", this).addClass("bounceInLeft");
+			$(".anim-block__img_2", this).addClass("bounceInLeft");
+			$(".anim-block__img_3", this).addClass("flipInY");
+			$(".circle_1", this).addClass("animrotate");				
+		},
+		function() {
+			$(".anim-block__img_1", this).removeClass("bounceInLeft");
+			$(".anim-block__img_2", this).removeClass("bounceInLeft");
+			$(".anim-block__img_3", this).removeClass("flipInY");		
+			$(".circle_1", this).removeClass("animrotate");					
+		}
+	);
+	/* icon-service-2 */
+	/* icon-service-3 */
+	$(".js-servise-3").hover(
+		function() {
+			$(".anim-block__img_1", this).addClass("bounceInLeft");
+			$(".anim-block__img_2", this).addClass("bounceInLeft");
+			$(".anim-block__img_3", this).addClass("bounceInRight");
+			$(".circle_1", this).addClass("animrotate");
+			$(".circle_2", this).addClass("animrotate");			
+		},
+		function() {
+			$(".anim-block__img_1", this).removeClass("bounceInLeft");
+			$(".anim-block__img_2", this).removeClass("bounceInLeft");
+			$(".anim-block__img_3", this).removeClass("bounceInRight");		
+			$(".circle_1", this).removeClass("animrotate");
+			$(".circle_2", this).removeClass("animrotate");			
+		}
+	);
+	/* icon-service-3 */
+	/* icon-service-4 */
+	$(".js-servise-4").hover(
+		function() {
+			$(".anim-block__img_1", this).addClass("bounceInLeft");
+			$(".anim-block__img_2", this).addClass("heightDown");
+			$(".anim-block__img_3", this).addClass("fadeIn");
+			$(".anim-block__img_4", this).addClass("bounceInRight");
+		},
+		function() {
+			$(".anim-block__img_1", this).removeClass("bounceInLeft");
+			$(".anim-block__img_2", this).removeClass("heightDown");
+			$(".anim-block__img_3", this).removeClass("fadeIn");	
+			$(".anim-block__img_4", this).removeClass("bounceInRight");		
+		}
+	);
+	/* icon-service-4 */
 	/* icon-service-5 */
 	$(".js-servise-5").hover(
 		function() {
-			$(".anim-block__img_1").addClass("bounceInLeft");
-			$(".anim-block__img_2").addClass("bounceInRight");
-			$(".anim-block__img_3").addClass("flipInY");
-			$(".anim-block__img_4").addClass("heightDown");
-			$(".circle_1").addClass("animrotate");
-			$(".circle_2").addClass("animrotate");
-			$(".circle_3").addClass("animrotate");
+			$(".anim-block__img_1", this).addClass("bounceInLeft");
+			$(".anim-block__img_2", this).addClass("bounceInRight");
+			$(".anim-block__img_3", this).addClass("flipInY");
+			$(".anim-block__img_4", this).addClass("heightDown");
+			$(".circle_1", this).addClass("animrotate");
+			$(".circle_2", this).addClass("animrotate");
+			$(".circle_3", this).addClass("animrotate");
 		},
 		function() {
-			$(".anim-block__img_1").removeClass("bounceInLeft");
-			$(".anim-block__img_2").removeClass("bounceInRight");
-			$(".anim-block__img_3").removeClass("flipInY");
-			$(".anim-block__img_4").removeClass("heightDown");
-			$(".circle_1").removeClass("animrotate");
-			$(".circle_2").removeClass("animrotate");
-			$(".circle_3").removeClass("animrotate");
+			$(".anim-block__img_1", this).removeClass("bounceInLeft");
+			$(".anim-block__img_2", this).removeClass("bounceInRight");
+			$(".anim-block__img_3", this).removeClass("flipInY");
+			$(".anim-block__img_4", this).removeClass("heightDown");
+			$(".circle_1", this).removeClass("animrotate");
+			$(".circle_2", this).removeClass("animrotate");
+			$(".circle_3", this).removeClass("animrotate");
 		}
 	);
 	/* icon-service-5 */
+	/* icon-service-6 */
+	$(".js-servise-6").hover(
+		function() {
+			$(".anim-block__img_1", this).addClass("fadeInLeft");
+			$(".anim-block__img_2", this).addClass("fadeInRight");
+			$(".anim-block__img_3", this).addClass("fadeInDown");			
+		},
+		function() {
+			$(".anim-block__img_1", this).removeClass("fadeInLeft");
+			$(".anim-block__img_2", this).removeClass("fadeInRight");
+			$(".anim-block__img_3", this).removeClass("fadeInDown");		
+		}
+	);
+	/* icon-service-6 */
+	
 	
 	/* fancybox */
 	if($('.fancybox').length){
@@ -193,6 +281,20 @@ $(function(){
 		});
 	};
 	/* fancybox */
+	
+	/* box search */
+	$('.js-search').click(function() {		
+		$(".search-form").toggleClass("opened-search");
+		$(this).toggleClass("active");
+		return false;
+	});
+	$(document).click(function(e){
+		if ($(e.target).parents().filter('.search-form:visible').length != 1) {
+			$('.search-form').removeClass("opened-search");
+			$('.js-search').removeClass("active");
+		}
+	});
+	/* box search */
 
 	/*aside*/
 	$('.js-item').on('click', function(){
@@ -232,6 +334,9 @@ var handler = function(){
 	
 	var height_col = $('.col-inf_2').height();
 	$('.col-inf_1, .col-inf_3').height(height_col);
+	
+	var widthNav = $('.main-nav-list').width();
+	$('.search-form').width(widthNav-38);
 	
 	var viewport_wid = viewport().width;
 	
