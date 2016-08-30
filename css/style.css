@@ -222,7 +222,7 @@ header .wrapper{
 	text-decoration: none;
 	font-weight: 350;
 }
-.main-nav-list__link:hover, .active .main-nav-list__link{
+.main-nav-list__link:hover{
 	color: #f36f21;
 }
 .box-search{
@@ -240,12 +240,10 @@ header .wrapper{
 	text-align: center;
 	padding: 42px 0 0 0;
 }
-.box-search__link:hover, .box-search__link.active{
+.box-search__link:hover{
 	background: #f36f21;
 }
-/*.box-search__link.active:hover{
-	background: #FFF;
-}*/
+
 .box-search__icon{
 	display: block;
 	width: 41px;
@@ -253,12 +251,10 @@ header .wrapper{
 	margin: 0 auto 0 auto;
 	background:url(../img/icon_search.png) no-repeat left top;
 }
-.box-search__link:hover .box-search__icon, .box-search__link.active .box-search__icon{
+.box-search__link:hover .box-search__icon{
 	background-position: left bottom;
 }
-/*.box-search__link.active:hover .box-search__icon{
-	background-position: left top;
-}*/
+
 .main-nav{
 	position: relative;
 	min-height: 120px;
@@ -404,7 +400,7 @@ header .wrapper{
 	
 }
 .load-animate .box-slider__img{
-	-moz-transition: all 0.3s 1.5s linear; -o-transition: all 0.3s 1.5s linear; -ms-transition: all 0.3s 1.5s linear; -webkit-transition: all 0.3s 1.5s linear; transition: all 0.3s 1.5s linear;
+	-moz-transition: all 0.2s 0.4s linear; -o-transition: all 0.2s 0.4s linear; -ms-transition: all 0.2s 0.4s linear; -webkit-transition: all 0.2s 0.4s linear; transition: all 0.2s 0.4s linear;
 }
 
 .slick-active .box-slider__img{
