@@ -1241,6 +1241,67 @@ aside {
 }
 /* END ADVANTAGES */
 
+/* TABS */
+.box-tab-cont{
+   position: relative;
+}
+.hide-tab{
+   position: absolute;
+   left: 0;top: 0;
+   height:0; width:0;
+   overflow:hidden;
+   z-index: -1;
+   opacity: 0;
+}
+.nav-tab-list__item {
+	display: inline-block;
+	vertical-align: middle;
+	width: 25%;
+	margin-right: -5px;
+	border-bottom: 1px solid #cccccc;
+	text-align: center;
+	padding: 10px 0;
+}
+.nav-tab-list__item.active {
+	border-bottom: none;
+	border-top: 1px solid #cccccc;
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+}
+.nav-tab-list__link {
+	text-transform: uppercase;
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: 400;
+	font-family:'HeliosCond';
+	color: #cccccc;
+}
+.nav-tab-list__item.active .nav-tab-list__link, .nav-tab-list__link:hover {
+	color: #000;
+}
+.box-tab-cont {
+	padding: 40px;
+}
+.tab-advantages__item {
+	list-style-type: none;
+	width: 100%;
+
+}
+.tab-advantages__img {
+	width: 25.8%;
+	display: inline-block;
+	margin-right: -5px;
+}
+.tab-advantages__img img {
+	width: 100%;
+}
+.tab-advantages__text {
+	width: 74.2%;
+	display: inline-block;
+	padding: 0 40px;
+}
+/* END TABS*/
+
 
 /*
 ================================================================================
@@ -1850,6 +1911,19 @@ footer{
 	    margin: 10px auto 0;
     	width: 70%;
 	}
+<<<<<<< HEAD
+=======
+	aside {
+	    width: 100%;
+	    float: none;
+	}
+	.inner-cont {
+	    margin: 0;
+	    padding: 0;
+	    float: none;
+	    width: 100%;
+	}
+>>>>>>> ivanna
 }
 
 @media screen and (max-width:640px){
