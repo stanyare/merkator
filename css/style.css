@@ -1340,6 +1340,12 @@ aside {
 	position: relative;
     z-index: 1;
 }
+.aside__img {
+	padding: 85px 0 0;
+}
+.aside__img img {
+	width: 100%;
+}
 .inner-cont {
 	margin: 0 0 0 -400px;
     padding: 0 0 0 20px;
@@ -1831,9 +1837,11 @@ aside {
 	line-height: 24px;
 	font-weight: 400;
 }
+.box-sales__tel a:hover, .box-sales__mail a:hover, .bread-crambs__link:hover{
+	text-decoration: underline;
+}
 .box-sales__mail a {
 	color: #f36f21;
-
 }
 /* END COSTING */
 
@@ -2696,6 +2704,9 @@ footer{
 	aside {
 	    width: 100%;
 	    float: none;
+	}
+	.aside__img {
+		display: none;
 	}
 	.aside__link span {
 	    height: 75px;
