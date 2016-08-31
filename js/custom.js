@@ -300,11 +300,11 @@ $(function(){
 	$('.js-item').on('click', function(){
 		$(this).find('.js-sub-list').slideToggle();
 	});
+	/*aside*/
+
 	/* product slider */	
 	if($('.js-product').length){
 		$('.js-product').slick({
-		  /*appendArrows: $(".slick-arrow-wrap"),*/
-		  prevArrow: '<div class="slick-arrow-wrap"><button type="button" class="slick-prev">Previous</button></div>',
 		  dots: false,
 		  infinite: true,
 		  speed: 1000,
@@ -313,7 +313,9 @@ $(function(){
 
 		});
 	};
+	/* product slider */
 
+	/*tabs*/
 	$('.tabs li a').click(function(){
     	$(this).parents('.tab-wrap').find('.tab-cont').addClass('hide-tab');
     	$(this).parent().siblings().removeClass('active');
@@ -322,9 +324,10 @@ $(function(){
     	$(this).parent().addClass('active');
 	   return false;
 	});
+	/*tabs*/
 
 	/* forms */
-	/*$('.form-control').each(function(){
+	$('.form-control').each(function(){
 		var placeholder = $(this).attr('placeholder');
 		$(this).focus(function(){ $(this).attr('placeholder', ''); return false;});
 		$(this).focusout(function(){			 
@@ -345,8 +348,20 @@ $(function(){
 		} else{
 			$(this).parents('.box-field').removeClass('focused-field');
 		};
-	});*/
+	});
 	/* forms */
+
+	/*back*/
+	$('.js-back').on('click', function(){
+		/*$(this).siblings().removeClass('active');*/
+		if($(this).is('.back__arrow_left')){
+			$(this).parent().find('.back-left').toggleClass('active');
+		}else{
+			$(this).parent().find('.back-right').toggleClass('active');
+		}
+		return false;
+	});
+	/*back*/
 
 });
 
