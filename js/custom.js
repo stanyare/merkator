@@ -363,6 +363,8 @@ $(function(){
 	});
 	/*back*/
 
+	$("a.js-image").fancybox();
+
 });
 
 var handler = function(){
