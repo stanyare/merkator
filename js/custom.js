@@ -221,6 +221,30 @@ $(function(){
 	   return false;
 	});
 
+	/* forms */
+	/*$('.form-control').each(function(){
+		var placeholder = $(this).attr('placeholder');
+		$(this).focus(function(){ $(this).attr('placeholder', ''); return false;});
+		$(this).focusout(function(){			 
+			$(this).attr('placeholder', placeholder);
+			return false;
+		});
+	});
+	
+	$('.form-control').focus(function(){
+		$(this).parents('.box-field').addClass('focused-field');
+	});
+	
+	$('.form-control').focusout(function(){
+		var val_field = $(this).val().length;		 
+			
+		if (val_field > 1) {
+			$(this).parents('.box-field').addClass('focused-field');
+		} else{
+			$(this).parents('.box-field').removeClass('focused-field');
+		};
+	});*/
+	/* forms */
 
 });
 

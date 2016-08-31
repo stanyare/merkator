@@ -1242,8 +1242,14 @@ aside {
 /* END ADVANTAGES */
 
 /* TABS */
+.tab-wrap {
+	padding-top: 40px;
+}
 .box-tab-cont{
    position: relative;
+   border-left: 2px solid #e6e6e6;
+   border-right: 2px solid #e6e6e6;
+   border-bottom: 2px solid #e6e6e6;
 }
 .hide-tab{
    position: absolute;
@@ -1253,20 +1259,24 @@ aside {
    z-index: -1;
    opacity: 0;
 }
-.nav-tab-list__item {
-	display: inline-block;
-	vertical-align: middle;
-	width: 25%;
-	margin-right: -5px;
-	border-bottom: 1px solid #cccccc;
-	text-align: center;
-	padding: 10px 0;
+.nav-tab-list {
+	overflow: hidden;
 }
+.nav-tab-list__item {
+	width: 25%;
+	height: 61px;
+	border-bottom: 2px solid #e6e6e6;
+	text-align: center;
+	padding: 0 10px;
+	float: left;
+	list-style-type: none;
+}
+
 .nav-tab-list__item.active {
 	border-bottom: none;
-	border-top: 1px solid #cccccc;
-	border-left: 1px solid #cccccc;
-	border-right: 1px solid #cccccc;
+	border-top: 2px solid #e6e6e6;
+	border-left: 2px solid #e6e6e6;
+	border-right: 2px solid #e6e6e6;
 }
 .nav-tab-list__link {
 	text-transform: uppercase;
@@ -1275,21 +1285,31 @@ aside {
 	font-weight: 400;
 	font-family:'HeliosCond';
 	color: #cccccc;
+	display: table;
+	vertical-align: middle;
+	margin: 0 auto;
+}
+.nav-tab-list__link span {
+	display: table-cell;
+	vertical-align: middle;
+	height: 61px;
 }
 .nav-tab-list__item.active .nav-tab-list__link, .nav-tab-list__link:hover {
 	color: #000;
 }
 .box-tab-cont {
-	padding: 40px;
+	padding: 40px 40px 37px;
+}
+.tab-advantages__list {
+	border-bottom: 1px solid #e6e6e6;
 }
 .tab-advantages__item {
 	list-style-type: none;
 	width: 100%;
-
+	margin-bottom: 40px;
 }
 .tab-advantages__img {
 	width: 25.8%;
-	display: inline-block;
 	margin-right: -5px;
 }
 .tab-advantages__img img {
@@ -1297,12 +1317,156 @@ aside {
 }
 .tab-advantages__text {
 	width: 74.2%;
+	padding: 0 0 0 40px;
+}
+.tab-advantages__item h3 {
+	padding: 0 0 12px;
+	font-size: 22px;
+	line-height: 24px;
+	font-weight: 400;
+	font-family: 'HeliosCond';
+}
+.tab-advantages__img, .tab-advantages__text {
 	display: inline-block;
-	padding: 0 40px;
+	vertical-align: top;
+}
+.box-tab-link {
+	text-align: center;
+	padding-top: 38px;
+}
+.tab-link__cont {
+	color: #f36f21;
+	font-size: 18px;
+	line-height: 20px;
+	font-family: "HeliosCond", sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	position: relative;
+}
+.tab-link__cont:after {
+	content: "";
+	display: inline-block;
+	width: 23px;
+	height: 23px;
+	background: url('../img/more.png') no-repeat center;
+	background-size: contain;
+	position: absolute;
+	left: -33px;
+	top: -5px;
+
 }
 /* END TABS*/
 
+/* COSTING*/
+.box-costing h2{
+	font-family: 'HeliosCond', sans-serif;
+	font-size: 39px;
+	font-weight: 400;
+	line-height: 43px;
+	padding: 55px 0 30px;
+}
+.box-form {
+	width: 63%;
+	float: left;
+	background-color: #f2f2f2;
+	overflow: hidden;
+	padding: 80px 0;
+}
+.costing-form {
+	width: 90%;
+	max-width: 417px;
+	margin: 0 auto;
+}
+.box-field {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+.hide-label {
+    display: block;
+    position: absolute;
+    left: 30px;
+    top: 5px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #8c8c8c;
+    font-family: "HeliosCond";
+    z-index: 2;
+}
+.focused-field .hide-label {
+    display: block;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 60px;
+    padding: 6px 12px;
+    font-size: 18px;
+    line-height: 20px;
+    color: #8c8c8c;
+    background-color: #fff;
+    border: none;
+	margin-bottom: 2px;
+}
+.costing-form .button_block {
+	width: 100%;
+	background-color: #f36f21;
+	color: #fff;
+	margin-top: 38px;
+}
+.costing-form .button_block:hover {
+	width: 100%;
+	background-color: transparent;
+	border: 1px solid #f36f21;
+	color: #f36f21;
+}
+.box-sales {
+	width: 37%;
+	float: right;
+	text-align: center;
+}
+.box-sales h3, .box-sales__name {
+	font-family: "HeliosCond", sans-serif;
+	font-size: 22px;
+	line-height: 24px;
+	font-weight: 400;
+}
+.box-sales h3 {
+	padding: 0 0 30px;
 
+}
+.box-sales__photo {
+	width: 138px;
+	height: 139px;
+	margin: 0 auto 45px;
+	overflow: hidden;
+}
+.box-sales__photo img {
+	width: 100%;
+}
+.box-sales__position {
+	font-family:'FiraSans';
+	font-weight: 350;
+	font-size: 15px;
+	padding: 5px 0 45px;
+}
+.box-sales__tel {
+	padding-bottom: 16px;
+}
+.box-sales__tel a, .box-sales__mail a{
+	font-family: "HeliosCond";
+	font-size: 22px;
+	line-height: 24px;
+	font-weight: 400;
+}
+.box-sales__mail a {
+	color: #f36f21;
+
+}
+
+
+/* END COSTING*/
 /*
 ================================================================================
 |                                     FOOTER                                   |
@@ -1825,6 +1989,14 @@ footer{
 	.box-slider_advantages {
 	    height: 450px;
 	}
+	.nav-tab-list__link {
+		font-size: 16px;
+		line-height: 18px;
+	}
+	.box-sales__tel a, .box-sales__mail a {
+	    font-size: 18px;
+	    line-height: 20px;
+	}
 }
 
 @media screen and (max-width:767px){
@@ -1906,13 +2078,14 @@ footer{
 		bottom: 120px;
 	}
 	
+	.inner-page .main-wrapper {
+	    padding: 10px;
+	}
 	.box-advantages__buttons .button {
 		display: block;
 	    margin: 10px auto 0;
     	width: 70%;
 	}
-<<<<<<< HEAD
-=======
 	aside {
 	    width: 100%;
 	    float: none;
@@ -1923,7 +2096,12 @@ footer{
 	    float: none;
 	    width: 100%;
 	}
->>>>>>> ivanna
+	.box-tab-cont {
+	    padding: 25px;
+	}
+	.tab-advantages__text {
+	    padding: 0 0 0 25px;
+	}
 }
 
 @media screen and (max-width:640px){
@@ -1936,6 +2114,25 @@ footer{
 	}
 	.box-advantages__buttons .button {
     	width: 80%;
+	}
+	.nav-tab-list__item {
+	    width: 100%;
+	    border: none;
+	}
+	.box-tab-cont {
+	    border: 2px solid #cccccc;
+	}
+	.nav-tab-list__item.active {
+	    border: none;
+	}
+	.tab-advantages__img, .tab-advantages__text {
+		width: 100%;
+		padding: 0;
+	}
+	.tab-advantages__item h3 {
+		padding: 12px 0 0 0;
+		font-size: 18px;
+		line-height: 20px;
 	}
 }
 
@@ -2010,6 +2207,19 @@ footer{
 	}
 	.box-timer{
 		left: 75px;
+	}
+	.box-sales, .box-form {
+	    width: 100%;
+	    float: none;
+	}
+	.box-sales h3 {
+	    padding: 15px 0 15px;
+	}
+	.box-sales__photo {
+	    margin: 0 auto 15px;
+	}
+	.box-sales__position {
+	    padding: 5px 0 15px;
 	}
 }
 @media screen and (max-width:450px){
