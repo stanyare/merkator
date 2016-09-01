@@ -2073,6 +2073,7 @@ aside {
 .defolt-form .box-field__input-wrap {
     display: inline-block;
     width: 64.3%;
+    position: relative;
 }
 .defolt-form .box-field__input {
 	width: 100%;
@@ -2092,12 +2093,26 @@ aside {
 .defolt-form  .box-field_groupe .box-field__input-wrap {
 	width: 32.15%;
 }
-.defolt-form  .box-field_groupe .box-field__input-wrap:last-child {
-	margin-left: 20px;
+.defolt-form .box-field_groupe .box-field__input-wrap_left {
+	padding-right: 10px;
+}
+.defolt-form .box-field_groupe .box-field__input-wrap:last-child {
+	padding-left: 10px;
 }
 
 .defolt-form .form-control_date {
 	background: url('../img/img_icon_date.png') no-repeat 94% center;
+}
+.box-field__input-wrap_moto span {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	font-size: 18px;
+    font-family: 'HeliosCond', sans-serif;
+    line-height: 20px;
+    font-weight: 400;
+    color: #959595;
+    text-transform: uppercase;
 }
 /* END WARRANTY */
 
