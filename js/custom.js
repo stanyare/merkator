@@ -353,18 +353,20 @@ $(function(){
 
 	/*back*/
 	$('.js-back').on('click', function(){
-		/*$(this).siblings().removeClass('active');*/
 		if($(this).is('.back__arrow_left')){
+			$(this).parent().find('.back-right').removeClass('active');
 			$(this).parent().find('.back-left').toggleClass('active');
 		}else{
+			$(this).parent().find('.back-left').removeClass('active');
 			$(this).parent().find('.back-right').toggleClass('active');
 		}
 		return false;
 	});
 	/*back*/
 
-	$("a.js-image").fancybox();
-
+	if($('.js-image').length){
+		$(".js-image").fancybox();
+	};
 });
 
 var handler = function(){

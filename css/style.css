@@ -1344,7 +1344,9 @@ aside {
 	padding: 85px 0 0;
 }
 .aside__img img {
-	width: 100%;
+	max-width: 70%;
+	margin: 0 auto;
+	display: block;
 }
 .inner-cont {
 	margin: 0 0 0 -400px;
@@ -1442,6 +1444,9 @@ aside {
 .box-slider_product {
 	height: 403px;
 	margin-bottom: 40px;
+}
+.box-slider_product .slick-initialized .slick-slide {
+    background-size: cover;
 }
 .box-slider_product .slider-description {
 	padding: 0 40px;
@@ -1654,12 +1659,16 @@ aside {
 .tab-advantages__img {
 	width: 25.8%;
 	margin-right: -5px;
-	position: relative;
 }
+
 .tab-advantages__img img {
 	width: 100%;
 }
-.tab-advantages__img:hover:before {
+.tab-advantages__link, .subcategory__link {
+	display: block;
+	position: relative;
+}
+.tab-advantages__link:hover:before, .subcategory__link:hover:before {
 	content: '';
 	display: block;
 	width: 100%;
@@ -1667,7 +1676,7 @@ aside {
 	position: absolute;
 	background: rgba(0,0,0,0.5);
 }
-.tab-advantages__img:hover:after {
+.tab-advantages__link:hover:after, .subcategory__link:hover:after {
 	content: '';
 	display: block;
 	width:41px;
@@ -1870,6 +1879,9 @@ aside {
 	text-transform: uppercase;
 	padding: 0 200px;
 }
+.box-back__title a:hover {
+	color: #f36f21;
+}
 .box-back__dots {
 	padding-top: 5px;
 }
@@ -1981,8 +1993,49 @@ aside {
 	text-align: right;
 }
 
-
 /* END BACK */
+
+/* SUBCATEGOTY */
+.box-subcategory h1 {
+	font-size: 39px;
+	line-height: 42px;
+	font-weight: 400;
+	padding: 15px 0 30px;
+}
+.subcategory__list {
+	list-style-type: none;
+}
+.subcategory__item {
+	padding: 0 0 40px;
+}
+.subcategory__img, .subcategory__text {
+	display: inline-block;
+	vertical-align: top;
+}
+.subcategory__img {
+	width: 35.4%;
+}
+.subcategory__text {
+	width: 64.6%;
+	margin-left: -4px;
+	padding-left: 20px;
+}
+.subcategory__text h3, .subcategory__text h3 a{
+	font-size: 29px;
+	line-height: 47px;
+	padding: 0;
+}
+.subcategory__text h3 a{
+	margin-top: -10px;
+	display: block;
+}
+.subcategory__text h3{
+	padding: 0 0 5px;
+}
+.subcategory__img img{
+	width: 100%;
+}
+/* END SUBCATEGOTY */
 
 /*
 ================================================================================
