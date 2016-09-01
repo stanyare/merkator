@@ -2035,6 +2035,14 @@ aside {
 .subcategory__img img{
 	width: 100%;
 }
+.subcategory__button {
+    text-align: left;
+    margin-left: 35.4%;
+	padding: 5px 0 120px 20px;
+}
+.subcategory__button .button_green{
+	width: 294px;
+}
 /* END SUBCATEGOTY */
 
 /*
@@ -2629,6 +2637,10 @@ footer{
 	.opened-search{
 		right: 0px;
 	}
+
+	.aside__link span {
+	    padding: 0 10px;
+	}
 	.nav-tab-list__link {
 		font-size: 16px;
 		line-height: 18px;
@@ -2659,6 +2671,11 @@ footer{
 	.box-slider_product .slick-next {
 	    right: 0;
 	    left: initial;
+	}
+	.subcategory__text h3, .subcategory__text h3 a {
+	    font-size: 22px;
+	    line-height: 30px;
+	   /*  padding: 0; */
 	}
 }
 
@@ -2797,6 +2814,9 @@ footer{
 	    right: 0;
 	    left: initial;
 	}
+	.box-subcategory {
+		padding: 0 10px;
+	}
 }
 
 @media screen and (max-width:640px){
@@ -2879,6 +2899,32 @@ footer{
 	.nav-tab-list__item, .nav-tab-list__link span {
 		height: 28px;
 	}
+
+	.subcategory__item {
+	    padding: 0 0 20px;
+	}
+	.subcategory__img, .subcategory__text {
+	    width: 100%;
+	}
+	.subcategory__text {
+	    margin: 15px 0px 0;
+	    padding-left: 0px;
+	}
+	.subcategory__button {
+	    text-align: center;
+	    margin-left: 0;
+	    padding: 0 0 30px;
+	}
+	.subcategory__text h3, .subcategory__text h3 a {
+	    padding: 0;
+	}
+	.box-subcategory h1 {
+	    font-size: 30px;
+	    line-height: 36px;
+	    font-weight: 400;
+	    padding: 15px 0 10px;
+	}
+
 }
 
 @media screen and (max-width:500px){
