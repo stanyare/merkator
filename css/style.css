@@ -1373,7 +1373,7 @@ aside {
 .aside__link span {
 	display: table-cell;
 	vertical-align: middle;
-	height: 125px;
+	height: 122px;
 	padding: 0 40px;
 }
 .aside__item.active .aside__link, .aside__link:hover {
@@ -1551,11 +1551,11 @@ aside {
     left: inherit;
     bottom: 75px;
 }
-.box-slider_advantages .slider-img {
+/* .box-slider_advantages .box-slider__img {
 	height: 100%;
 	width:calc(100% - 398px);
 	background-size: cover;
-}
+} */
 
 .box-advantages__buttons {
 	text-align: center;
@@ -2385,10 +2385,10 @@ footer{
 	.box-slider_advantages .slider-wrap .slick-next {
 	    right: 35px;
 	}
-	.box-slider_advantages .slider-img {
-	    height: 300px;
-	    width: 100%;
-	}
+/* 	.box-slider_advantages .box-slider__img{
+    height: 300px;
+    width: 100%;
+} */
 
 
 	.active.back-left {
