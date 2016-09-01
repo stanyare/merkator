@@ -367,6 +367,10 @@ $(function(){
 	if($('.js-image').length){
 		$(".js-image").fancybox();
 	};
+
+	$( function() {
+	    $( "#datepicker" ).datepicker();
+	  } );
 });
 
 var handler = function(){

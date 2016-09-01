@@ -2045,6 +2045,63 @@ aside {
 }
 /* END SUBCATEGOTY */
 
+/* WARRANTY */
+
+.box-warranty .nav-tab-list__item{
+	width: 33.3333%;
+}
+.box-warranty .box-tab-cont {
+	padding: 55px 60px;
+}
+
+.defolt-form .box-field {
+    margin-bottom: 20px;
+    display: table;
+    float: none;
+}
+.defolt-form .label {
+    display: inline-block;
+    vertical-align: middle;
+    width: 35.7%;
+    font-size: 18px;
+    font-family: 'HeliosCond', sans-serif;
+    line-height: 20px;
+    font-weight: 400;
+    color: #959595;
+    text-transform: uppercase;
+}
+.defolt-form .box-field__input-wrap {
+    display: inline-block;
+    width: 64.3%;
+}
+.defolt-form .box-field__input {
+	width: 100%;
+	height: 60px;
+    padding: 6px 12px;
+    font-size: 18px;
+    line-height: 20px;
+    color: #8c8c8c;
+    border: 1px solid #e6e6e6;
+}
+.defolt-form .box-field_long-lab .label {
+	width: 47.5%;
+}
+.defolt-form .box-field_long-lab .box-field__input-wrap {
+	width: 52.5%;
+}
+.defolt-form  .box-field_groupe .box-field__input-wrap {
+	width: 32.15%;
+}
+.defolt-form  .box-field_groupe .box-field__input-wrap:last-child {
+	margin-left: 20px;
+}
+
+.defolt-form .form-control_date {
+	background: url('../img/img_icon_date.png') no-repeat 94% center;
+}
+/* END WARRANTY */
+
+
 /*
 ================================================================================
 |                                     FOOTER                                   |
