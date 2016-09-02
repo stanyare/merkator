@@ -2081,15 +2081,17 @@ aside {
 
 .defolt-form .box-field {
     margin-bottom: 20px;
-    display: table;
     float: none;
 }
 .defolt-form .label {
-    display: inline-block;
-    vertical-align: middle;
     width: 35.7%;
     text-transform: uppercase;
     padding-right: 10px;
+}
+.defolt-form .label, .defolt-form .box-field__input-wrap {
+    display: inline-block;
+    margin-right: -5px;
+    vertical-align: middle;
 }
 .defolt-form .label, .defolt-form .box-field__input, .defolt-form .box-field__textarea {
 	font-size: 18px;
@@ -2098,8 +2100,18 @@ aside {
     font-weight: 400;
     color: #959595;
 }
+
+.defolt-form .box-field__input::-webkit-input-placeholder {color:#959595!important;}
+.defolt-form .box-field__input::-moz-placeholder          {color:#959595!important;}/* Firefox 19+ */
+.defolt-form .box-field__input:-moz-placeholder           {color:#959595!important;}/* Firefox 18- */
+.defolt-form .box-field__input:-ms-input-placeholder      {color:#959595!important;}
+
+/* input[placeholder]          {text-overflow:ellipsis;}
+input::-moz-placeholder     {text-overflow:ellipsis;} 
+input:-moz-placeholder      {text-overflow:ellipsis;} 
+input:-ms-input-placeholder {text-overflow:ellipsis;} 
+ */
 .defolt-form .box-field__input-wrap {
-    display: inline-block;
     width: 64.3%;
     position: relative;
 }
@@ -2127,6 +2139,9 @@ aside {
 }
 .defolt-form .box-field__input-wrap_date {
 	position: relative;
+}
+.defolt-form .box-field__input-wrap_date .box-field__input {
+	padding-right: 50px;
 }
 .defolt-form .calendar {
 	display: block;
@@ -2195,8 +2210,9 @@ aside {
 	display:inline-block;
 	width: 100%;
 	height: 100%;
-	background:#fff;
+	background-color:#fff;
 	border: 1px solid #f36f21;
+	transition: background-color 0.2s linear;
 }
 .defolt-form .block-checkbox input[type="checkbox"]:checked + label:before{
 	background-color:#f36f21;
@@ -2872,18 +2888,16 @@ footer{
 	.defolt-form .box-field__input-wrap,
 	.defolt-form .box-field_long-lab .label,
 	.defolt-form .box-field_long-lab .box-field__input-wrap,
-	.defolt-form .box-field_groupe .box-field__input-wrap,
 	.defolt-form .box-field__input-wrap_short,
-	.defolt-form .box-field__input-wrap_left,
-	.defolt-form .box-field_groupe .box-field__input-wrap:last-child {
+	.defolt-form .box-field__input-wrap_left {
 	    width: 100%;
 	    padding: 0px;
 	}
-	.defolt-form .box-field_groupe .box-field__input-wrap:last-child {
-		margin-top: 20px;
-	}
 	.defolt-form .box-field__input_short {
 		width: 100%;
+	}
+	.defolt-form .box-field_groupe .box-field__input-wrap {
+		width: 50%;
 	}
 }
 
@@ -3138,6 +3152,9 @@ footer{
 	.box-warranty .nav-tab-list__item {
 	    width: 100%;
 	}
+	.defolt-form .form-section {
+	    padding:30px;
+	}
 
 }
 
@@ -3280,11 +3297,22 @@ footer{
 	    padding-left: 45px;
 	}
 	.defolt-form .form-section {
-	    padding:30px;
+	    padding:10px;
 	}
 	.defolt-form .confirm-text {
 	    margin: 0px;
 	    padding: 10px 0 0 0px;
+	}
+	.defolt-form .box-field__input-wrap_date-min .calendar {
+	    top: 19px;
+	    right: 5px;
+	    width: 25px;
+	    height: 22px;
+	    background-size: contain;
+	}
+	.defolt-form .box-field__input-wrap_date-min .box-field__input {
+		font-size: 11px;
+		padding-right: 30px;
 	}
 }
 
