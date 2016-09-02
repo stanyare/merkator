@@ -298,8 +298,15 @@ $(function(){
 
 	/*aside*/
 	$('.js-item').on('click', function(e){
-		e.preventDefault();
-		$(this).find('.js-sub-list').slideToggle();
+	 var subList = $(this).find('.js-sub-list');
+	 if(subList.length) {
+	  $('.js-sub-list').slideUp();
+	  $(this).find('.aside__arrow').toggleClass('aside__arrow_up');
+	  if(!subList.is(":visible")) {
+	   e.preventDefault();
+	   $(this).find('.js-sub-list').slideToggle();
+	  }
+	 }
 	});
 	/*aside*/
 
@@ -373,6 +380,13 @@ $(function(){
 	    $( ".datepicker" ).datepicker({
 		  dateFormat: "dd.mm.yy"
 		});
+		$('.js-calendar').on('click', function(){
+			$(this).parent().find('.datepicker').datepicker( "show" );
+		});
+	};
+
+	if($('#tel').length){
+	   $("#tel").mask("+99(999)999-99-99",{placeholder:"+__(___)___-__-__"});
 	};
 });
 

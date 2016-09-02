@@ -1375,6 +1375,28 @@ aside {
 	vertical-align: middle;
 	height: 122px;
 	padding: 0 40px;
+	position: relative;
+}
+.aside__link .aside__arrow-wrap {
+	padding-right:70px;
+}
+.aside__link .aside__arrow {
+    width: 30px;
+    height: 15px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    margin-top: -10px;
+    background: url('../img/icon_sub.png')no-repeat;
+    background-size: 100% 100%;
+    padding: 0;
+}
+.aside__arrow_up {
+	-moz-transform: scale(1,-1);
+ 	-webkit-transform: scale(1,-1);
+ 	-o-transform: scale(1,-1);
+ 	transform: scale(1,-1);
 }
 .aside__item.active .aside__link, .aside__link:hover {
 	background-color: #f36f21;
@@ -2047,12 +2069,14 @@ aside {
 /* END SUBCATEGOTY */
 
 /* WARRANTY */
-
+.box-warranty {
+	padding-bottom: 60px;
+}
 .box-warranty .nav-tab-list__item{
 	width: 33.3333%;
 }
 .box-warranty .box-tab-cont {
-	padding: 55px 60px;
+	padding: 0;
 }
 
 .defolt-form .box-field {
@@ -2064,45 +2088,58 @@ aside {
     display: inline-block;
     vertical-align: middle;
     width: 35.7%;
-    font-size: 18px;
+    text-transform: uppercase;
+    padding-right: 10px;
+}
+.defolt-form .label, .defolt-form .box-field__input, .defolt-form .box-field__textarea {
+	font-size: 18px;
     font-family: 'HeliosCond', sans-serif;
     line-height: 20px;
     font-weight: 400;
     color: #959595;
-    text-transform: uppercase;
 }
 .defolt-form .box-field__input-wrap {
     display: inline-block;
     width: 64.3%;
     position: relative;
 }
-.defolt-form .box-field__input {
+.defolt-form .box-field__input, .defolt-form .box-field__textarea {
 	width: 100%;
 	height: 60px;
-    padding: 6px 12px;
-    font-size: 18px;
-    line-height: 20px;
-    color: #8c8c8c;
+    padding: 6px 15px;
     border: 1px solid #e6e6e6;
 }
+
 .defolt-form .box-field_long-lab .label {
 	width: 47.5%;
 }
 .defolt-form .box-field_long-lab .box-field__input-wrap {
 	width: 52.5%;
 }
-.defolt-form  .box-field_groupe .box-field__input-wrap {
+.defolt-form .box-field_groupe .box-field__input-wrap, .defolt-form .box-field__input-wrap_short {
 	width: 32.15%;
 }
-.defolt-form .box-field_groupe .box-field__input-wrap_left {
+.defolt-form .box-field__input-wrap_left {
 	padding-right: 10px;
 }
 .defolt-form .box-field_groupe .box-field__input-wrap:last-child {
 	padding-left: 10px;
 }
-
-.defolt-form .box-field__input-wrap_date:after {
-	background: url('../img/img_icon_date.png') no-repeat 94% center;
+.defolt-form .box-field__input-wrap_date {
+	position: relative;
+}
+.defolt-form .calendar {
+	display: block;
+	position: absolute;
+	top: 12px;
+	right: 15px;
+	width: 39px;
+	height: 36px;
+	background: url('../img/img_icon_date.png') no-repeat;
+	cursor: pointer;
+}
+.box-field__input-wrap_moto .box-field__input {
+	padding-right: 110px;
 }
 .box-field__input-wrap_moto span {
 	position: absolute;
@@ -2115,6 +2152,79 @@ aside {
     color: #959595;
     text-transform: uppercase;
 }
+
+.defolt-form .box-field__textarea {
+	height: 180px;
+	vertical-align: top;
+}
+.defolt-form .box-field_textarea .label {
+	padding-top: 20px;
+	vertical-align: top;
+}
+.defolt-form .form-section {
+	padding: 55px 60px 40px;
+	border-bottom: 1px solid #e6e6e6;
+}
+.defolt-form .form-section_cont {
+	padding: 20px 60px 60px;
+}
+.defolt-form .form-section_cont h2 {
+	padding-bottom: 7px;
+}
+.defolt-form .box-field__input_short {
+	width: 81.5%;
+}
+.block-checkbox {
+	overflow-y: hidden;
+	padding: 35px 0 52px;
+}
+.defolt-form .block-checkbox input[type="checkbox"]{
+	display:none;
+}
+.defolt-form .block-checkbox input[type="checkbox"] + label{
+	cursor:pointer;
+	width: 60px;
+	height: 60px;
+	border: 1px solid #e6e6e6;
+	padding: 7px;
+	float: left;
+}
+.defolt-form .block-checkbox input[type="checkbox"] + label:before{
+	content:"";
+	position:relative;
+	display:inline-block;
+	width: 100%;
+	height: 100%;
+	background:#fff;
+	border: 1px solid #f36f21;
+}
+.defolt-form .block-checkbox input[type="checkbox"]:checked + label:before{
+	background-color:#f36f21;
+	background-image:url('../img/check.png');
+	background-repeat:no-repeat;
+	background-position: center center;
+}
+
+.defolt-form .confirm-text {
+	float: left;
+	margin: 0 0 0 -60px;
+	padding: 0 0 0 100px;
+	width: 100%;
+	font-size: 14px;
+    color: #8c8c8c;
+}
+.defolt-form .button_block {
+	width: 100%;
+	max-width: 415px;
+	margin: 0 auto;
+	background: #f36f21;
+    color: #FFF;
+}
+.defolt-form .button_block:hover {
+	background: #fff;
+	color: #f36f21;
+}
+
 /* END WARRANTY */
 
 
@@ -2433,6 +2543,9 @@ footer{
 	.aside__link span {
 		padding: 0 25px;
 	}
+	.aside__link {
+	    font-size: 18px;
+	}
 	.box-timer{
 		left: 280px;
 	}
@@ -2458,10 +2571,6 @@ footer{
 	.box-slider_advantages .slider-wrap .slick-next {
 	    right: 35px;
 	}
-/* 	.box-slider_advantages .box-slider__img{
-    height: 300px;
-    width: 100%;
-} */
 
 
 	.active.back-left {
@@ -2498,6 +2607,9 @@ footer{
 	.box-slider_product .slider-description {
 	    padding: 0 30px;
 	    width: 65%;
+	}
+	.defolt-form .label, .defolt-form .box-field__input, .defolt-form .box-field__textarea, .box-field__input-wrap_moto span {
+	    font-size: 14px;
 	}
 	
 }
@@ -2663,7 +2775,16 @@ footer{
 		padding-right: 8%;
 		padding-top: 30px;
 	}
-	
+	.aside__link .aside__arrow-wrap {
+	    padding-right: 40px;
+	}
+	.aside__link .aside__arrow {
+	    width: 20px;
+	    height: 10px;
+	    right: 15px;
+	    margin-top: -10px;
+	    padding: 0;
+	}
 	.box-timer{
 		left: 175px;
 	}
@@ -2697,9 +2818,6 @@ footer{
 	.box-advantages__buttons .button_green {
 	    padding: 16px 10px 0 10px;
 	}
-	.aside__link {
-	    font-size: 18px;
-	}
 	.box-slider_advantages {
 	    height: 450px;
 	}
@@ -2715,7 +2833,7 @@ footer{
 	    padding: 0 10px;
 	}
 	.nav-tab-list__link {
-		font-size: 16px;
+		font-size: 15px;
 		line-height: 18px;
 	}
 	.box-sales__tel a, .box-sales__mail a {
@@ -2748,7 +2866,24 @@ footer{
 	.subcategory__text h3, .subcategory__text h3 a {
 	    font-size: 22px;
 	    line-height: 30px;
-	   /*  padding: 0; */
+	}
+
+	.defolt-form .label,
+	.defolt-form .box-field__input-wrap,
+	.defolt-form .box-field_long-lab .label,
+	.defolt-form .box-field_long-lab .box-field__input-wrap,
+	.defolt-form .box-field_groupe .box-field__input-wrap,
+	.defolt-form .box-field__input-wrap_short,
+	.defolt-form .box-field__input-wrap_left,
+	.defolt-form .box-field_groupe .box-field__input-wrap:last-child {
+	    width: 100%;
+	    padding: 0px;
+	}
+	.defolt-form .box-field_groupe .box-field__input-wrap:last-child {
+		margin-top: 20px;
+	}
+	.defolt-form .box-field__input_short {
+		width: 100%;
 	}
 }
 
@@ -2847,6 +2982,9 @@ footer{
 	aside {
 	    width: 100%;
 	    float: none;
+	}
+	.aside__link .aside__arrow {
+	    margin-top: -5px;
 	}
 	.aside__img {
 		display: none;
@@ -2997,6 +3135,9 @@ footer{
 	    font-weight: 400;
 	    padding: 15px 0 10px;
 	}
+	.box-warranty .nav-tab-list__item {
+	    width: 100%;
+	}
 
 }
 
@@ -3137,6 +3278,13 @@ footer{
 	}
 	.back-left .back__text {
 	    padding-left: 45px;
+	}
+	.defolt-form .form-section {
+	    padding:30px;
+	}
+	.defolt-form .confirm-text {
+	    margin: 0px;
+	    padding: 10px 0 0 0px;
 	}
 }
 
