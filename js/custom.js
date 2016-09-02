@@ -297,7 +297,8 @@ $(function(){
 	/* box search */
 
 	/*aside*/
-	$('.js-item').on('click', function(){
+	$('.js-item').on('click', function(e){
+		e.preventDefault();
 		$(this).find('.js-sub-list').slideToggle();
 	});
 	/*aside*/
@@ -352,7 +353,7 @@ $(function(){
 	/* forms */
 
 	/*back*/
-	$('.js-back').on('click', function(){
+	$('.js-back').on('hover', function(){
 		if($(this).is('.back__arrow_left')){
 			$(this).parent().find('.back-right').removeClass('active');
 			$(this).parent().find('.back-left').toggleClass('active');
@@ -368,9 +369,11 @@ $(function(){
 		$(".js-image").fancybox();
 	};
 
-	$( function() {
-	    $( ".datepicker" ).datepicker();
-	  } );
+	if($('.datepicker').length){
+	    $( ".datepicker" ).datepicker({
+		  dateFormat: "dd.mm.yy"
+		});
+	};
 });
 
 var handler = function(){

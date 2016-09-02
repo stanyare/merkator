@@ -16,7 +16,7 @@ blockquote, q {quotes: none;}
 blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none;}
 table {border-collapse: collapse; border-width: 0px; padding: 0px; margin: 0px;}
 html{height:100%; -webkit-text-size-adjust: none;-ms-text-size-adjust: none;}
-input, textarea {color: #333;  outline:none; border-radius: 0; -moz-border-radius: 0; -webkit-border-radius: 0; -webkit-appearance: none;}
+.main-wrapper input, .main-wrapper textarea {color: #333;  outline:none; border-radius: 0; -moz-border-radius: 0; -webkit-border-radius: 0; -webkit-appearance: none;}
 input[type="button"], input[type="submit"], button {cursor: pointer}
 td{margin: 0px; padding: 0px;}
 form{padding: 0px; margin: 0px;}
@@ -1453,6 +1453,7 @@ aside {
 	width: 553px;
 	height: 203px;
 	background: #00734a;
+	z-index: 22;
 }
 .box-slider_product .slider-description-text {
 	padding: 0;
@@ -2100,7 +2101,7 @@ aside {
 	padding-left: 10px;
 }
 
-.defolt-form .form-control_date {
+.defolt-form .box-field__input-wrap_date:after {
 	background: url('../img/img_icon_date.png') no-repeat 94% center;
 }
 .box-field__input-wrap_moto span {
