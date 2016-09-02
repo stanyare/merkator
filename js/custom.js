@@ -386,8 +386,19 @@ $(function(){
 	};
 
 	if($('#tel').length){
-	   $("#tel").mask("+99(999)999-99-99",{placeholder:"+__(___)___-__-__"});
+	   $("#tel").mask("+9(999)999-99-99",{placeholder:"+_(___)___-__-__"});
 	};
+
+	
+		$('.js-up').bind("click", function(e){
+			var anchor = $(this);
+			$('html, body').stop().animate({
+			scrollTop: $(anchor.attr('href')).offset().top}, 1000);
+			e.preventDefault();
+		});
+	
+
+
 });
 
 var handler = function(){
