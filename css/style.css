@@ -1341,7 +1341,7 @@ aside {
     z-index: 1;
 }
 .aside__img {
-	padding: 85px 0 0;
+	padding: 85px 0 175px;
 }
 .aside__img img {
 	max-width: 238px;
@@ -2352,11 +2352,68 @@ aside {
 }
 /* END FORM TO */
 
+/* CATEGORY */
+.category__list {
+	margin-right: -11px;
+	margin-left: -11px;
+}
+.category__item {
+	padding: 22px 11px 0 11px;
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: -5px;
+}
+.category__cont {
+	height: 330px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.category__cont:hover:before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.4);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.category__link {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 132px;
+	color: #fff;
+	font-family: "HeliosCond";
+	font-size: 24px;
+	line-height: 34px;
+	text-transform: uppercase;
+	padding: 36px 36px;
+}
+.category__cont:hover .category__link {
+	background-color: #f36f21;
+}
+.category__cont:hover .category__link:before {
+	content: "";
+	display: block;
+	width: 21px;
+	height: 17px;
+	background: url('../img/icon_list.png') no-repeat;
+	position: absolute;
+	bottom: 32px;
+	right: 29px;
+}
+
+/* END CATEGORY */
+
 .up-link {
 	position: absolute;
 	width: 70px;
 	height: 70px;
-	background-color: rgba(0,0,0,0.25);
+	background-color: rgba(0,0,0,0.2);
 	display: block;
 	left: 20px;
 	top: -110px;
@@ -2641,6 +2698,9 @@ footer{
 	.back__text {
 	    font-size: 16px;
 	}
+	.category__link {
+	    font-size: 21px;
+	}
 }
 
 @media screen and (max-width:1200px){
@@ -2789,6 +2849,9 @@ footer{
 	.defolt-form .box-fields .input-wrap_num .box-field__input,
 	.defolt-form .box-fields .input-wrap_note .box-field__input {
 	    padding-left: 15px;
+	}
+	.category__link {
+	    padding: 20px 50px 20px 36px;
 	}
 }
 
@@ -3064,6 +3127,14 @@ footer{
 	.defolt-form .form-section {
 	    padding: 57px 40px 40px;
 	}
+	.category__link {
+	    padding: 20px 50px 20px 20px;
+	    line-height: 25px;
+	}
+	.category__cont:hover .category__link:before {
+		bottom: 20px;
+		right: 20px;
+	}
 }
 
 @media screen and (max-width:767px){
@@ -3221,6 +3292,9 @@ footer{
 	    left: 50%;
 	    margin: -10px 0 0 -8px;
 	    background-size: contain;
+	}
+	.category__list {
+	    padding-bottom: 50px;
 	}
 }
 
@@ -3479,6 +3553,13 @@ footer{
 	    font-size: 35px;
 	    line-height: 40px;
 	    padding-left: 10px;
+	}
+	.category__item {
+	    width: 100%;
+	}
+	.category__link {
+	    font-size: 24px;
+	    line-height: 34px;
 	}
 }
 @media screen and (max-width:450px){
