@@ -372,10 +372,13 @@ $(function(){
 	});
 	/*back*/
 
+	/*fancybox*/
 	if($('.js-image').length){
 		$(".js-image").fancybox();
 	};
+	/*fancybox*/
 
+	/*datepicker*/
 	if($('.datepicker').length){
 	    $( ".datepicker" ).datepicker({
 		  dateFormat: "dd.mm.yy"
@@ -384,19 +387,28 @@ $(function(){
 			$(this).parent().find('.datepicker').datepicker( "show" );
 		});
 	};
+	/*datepicker*/
 
+	/*mask*/
 	if($('#tel').length){
 	   $("#tel").mask("+9(999)999-99-99",{placeholder:"+_(___)___-__-__"});
 	};
+	/*mask*/
+	
+	/*up-button*/
+	$('.js-up').bind("click", function(e){
+		var anchor = $(this);
+		$('html, body').stop().animate({
+		scrollTop: $(anchor.attr('href')).offset().top}, 1000);
+		e.preventDefault();
+	});
+	/*up-button*/
 
-	
-		$('.js-up').bind("click", function(e){
-			var anchor = $(this);
-			$('html, body').stop().animate({
-			scrollTop: $(anchor.attr('href')).offset().top}, 1000);
-			e.preventDefault();
-		});
-	
+	/*error*/
+	$('.js-error').on('click', function(){
+		$(this).hide().parent().find('input').focus();
+	});
+	/*error*/
 
 
 });
