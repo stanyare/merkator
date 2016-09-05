@@ -106,15 +106,15 @@
 				<span></span>
 				<span></span>
 			</a>
-			<div class=" opened-block-nav"><!-- tab-wrap -->
+			<div class="opened-block-nav">
 				<nav class=" main-nav">
-					<ul class=" main-nav-list"><!-- tabs -->
-						<li class="main-nav-list__item"><a href="#nav-tab_1" class="main-nav-list__link">О Холдинге</a></li>
-						<li class="main-nav-list__item active"><a href="#nav-tab_2" class="main-nav-list__link">Техника</a></li>
-						<li class="main-nav-list__item"><a href="#nav-tab_3" class="main-nav-list__link">Запасные части</a></li>
-						<li class="main-nav-list__item"><a href="#" class="main-nav-list__link">Сервис</a></li>
-						<li class="main-nav-list__item"><a href="#" class="main-nav-list__link">Новости</a></li>
-						<li class="main-nav-list__item"><a href="#" class="main-nav-list__link">Контакты</a></li>
+					<ul class="main-nav-list">
+						<li class="main-nav-list__item"><a href="#nav-tab_1" class="main-nav-list__link js-menu_link">О Холдинге</a></li>
+						<li class="main-nav-list__item"><a href="#nav-tab_2" class="main-nav-list__link js-menu_link">Техника</a></li>
+						<li class="main-nav-list__item"><a href="#nav-tab_3" class="main-nav-list__link js-menu_link">Запасные части</a></li>
+						<li class="main-nav-list__item"><a href="#" class="main-nav-list__link js-menu_link">Сервис</a></li>
+						<li class="main-nav-list__item"><a href="#" class="main-nav-list__link js-menu_link">Новости</a></li>
+						<li class="main-nav-list__item"><a href="#" class="main-nav-list__link js-menu_link">Контакты</a></li>
 					</ul>
 					<div class="search-form">
 						<form>
@@ -128,26 +128,104 @@
 							<span class="box-search__icon"></span>
 						</a>
 					</div>
-				</nav>
-		     	<!-- <div class="box-tab-cont">
-		     			            <div class="tab-cont" id="nav-tab_1">
-		     			   				111
-		     			            </div>
-		     			            <div class="tab-cont hide-tab" id="nav-tab_2">
-		     			            	222
-		     			            </div>
-		     			            <div class="tab-cont hide-tab" id="nav-tab_3">333</div>
-		     			       	</div> -->
-
-
-
-				
+				</nav>				
 				<div class="box-lang">
 					<a href="#" class="box-lang__link">EN</a>				
 				</div>
-				
 			</div>
 		</div>
+		<div class="box-menu-tab-cont">
+            <div class="menu__tab-cont hide-tab" id="nav-tab_1">
+   				<div class="drom-menu__col">
+            		<h3><a href="#" class="drop-menu__title">Коммунальная техника</a></h3>
+            		<ul class="drop-menu__list">
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Подметальные машины и оборудование</a></li>
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Комбинированные дорожные машины</a></li>
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Универсальные коммунальные шасси  и погрузчики</a></li>
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Снегоуборочное оборудование и машины</a></li>
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Распределители противогололедных реагентов</a></li>
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Садово-парковое оборудование</a></li>
+					</ul>
+            	</div>
+            	<div class="drom-menu__col">
+            		<h3><a href="#" class="drop-menu__title">Техника для ремонта дорог</a></h3>
+            		<ul class="drop-menu__list">
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Ремонт асфальта</a></li>
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Нанесение и удаление дорожной разметки</a></li>
+            		</ul>
+            		<h3><a href="#" class="drop-menu__title">Промышленные предприятия</a></h3>
+            		<ul class="drop-menu__list">
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Промышленная вакуумная очистка</a></li>
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Машины и оборудования для водоканала</a></li>
+            		</ul>
+            	</div>
+            </div>
+            <div class="menu__tab-cont hide-tab" id="nav-tab_2">
+            	<div class="drom-menu__col">
+            		<h3><a href="#" class="drop-menu__title">Коммунальная техника</a></h3>
+            		<ul class="drop-menu__list">
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Подметальные машины и оборудование</a></li>
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Комбинированные дорожные машины</a></li>
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Универсальные коммунальные шасси  и погрузчики</a></li>
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Снегоуборочное оборудование и машины</a></li>
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Распределители противогололедных реагентов</a></li>
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Садово-парковое оборудование</a></li>
+					</ul>
+            	</div>
+            	<div class="drom-menu__col">
+            		<h3><a href="#" class="drop-menu__title">Техника для ремонта дорог</a></h3>
+            		<ul class="drop-menu__list">
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Ремонт асфальта</a></li>
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Нанесение и удаление дорожной разметки</a></li>
+            		</ul>
+            		<h3><a href="#" class="drop-menu__title">Промышленные предприятия</a></h3>
+            		<ul class="drop-menu__list">
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Промышленная вакуумная очистка</a></li>
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Машины и оборудования для водоканала</a></li>
+            		</ul>
+            	</div>
+            	<div class="drom-menu__col">
+            		<h3><a href="#" class="drop-menu__title">Обращение с отходами</a></h3>
+            		<ul class="drop-menu__list">
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Транспортировка мусора</a></li>
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Технологии с обращения с отходами</a></li>
+            		</ul>
+            		<h3><a href="#" class="drop-menu__title">Дополнительное оборудование</a></h3>
+            		<ul class="drop-menu__list">
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Навесное оборудование для КДМ</a></li>
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Системы мониторинга</a></li>
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Системы хранения и приготовления противогололедных материалов</a></li>
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Снегоплавильное оборудование</a></li>
+            		</ul>
+            	</div>
+            	<div class="drom-menu__col">
+            		<h3><a href="#" class="drop-menu__title">техника в наличии</a></h3>
+            	</div>
+            </div>
+            <div class="menu__tab-cont hide-tab" id="nav-tab_3">
+            	<div class="drom-menu__col">
+            		<h3><a href="#" class="drop-menu__title">Обращение с отходами</a></h3>
+            		<ul class="drop-menu__list">
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Транспортировка мусора</a></li>
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Технологии с обращения с отходами</a></li>
+            		</ul>
+            	</div>
+
+            	<div class="drom-menu__col">
+            		<h3><a href="#" class="drop-menu__title">Дополнительное оборудование</a></h3>
+            		<ul class="drop-menu__list">
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Навесное оборудование для КДМ</a></li>
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Системы мониторинга</a></li>
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Системы хранения и приготовления противогололедных материалов</a></li>
+						<li class="drop-menu__item"><a href="#" class="drop-menu__link">Снегоплавильное оборудование</a></li>
+            		</ul>
+            	</div>
+
+            	<div class="drom-menu__col">
+            		<h3><a href="#" class="drop-menu__title">техника в наличии</a></h3>
+            	</div>
+            </div>
+       	</div>
 	</header>
 	
 <!-- HEADER EOF   -->	

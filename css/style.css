@@ -209,13 +209,17 @@ header .wrapper{
 	text-align: center;
 }
 .main-nav-list{
-	padding: 54px 1% 0 0;
+	padding: 0px 1% 0 0;
 }
 .main-nav-list__item{
 	display: inline-block;
 	vertical-align: top;
-	padding: 0 4.1% 0 4.1%;
+	padding: 51px 4.1% 0 4.1%;
 	margin: 0 -5px 0 0;
+	border-top: 3px solid transparent;
+}
+.main-nav-list__item.active {
+	border-top: 3px solid #f36f21;
 }
 .main-nav-list__link{
 	display: block;
@@ -1332,6 +1336,8 @@ svg.circleFill {
 }
 .inner-page header {
 	top: 0;
+}
+.inner-page header .wrapper {
 	box-shadow: 0 3px 7px 0 rgba(0,0,0,0.15);
 }
 .inner-page p {
@@ -2589,6 +2595,7 @@ vertical-align: middle;
 
 /* END ABOUT */
 
+/* UP-BUTTON */
 .up-link {
 	position: absolute;
 	width: 70px;
@@ -2610,8 +2617,57 @@ vertical-align: middle;
 	left: 50%;
 	margin: -19px 0 0 -16px;
 	background: url('../img/icon_up.png');
-
 }
+/* END UP-BUTTON */
+
+/* DROP MENU */
+.menu__tab-cont {
+	position: absolute;
+	width: calc(100% + 100px);
+	background-color: #f2f2f2;
+	padding: 34px 20px;
+	z-index: -1;
+	margin: 0 -40px;
+}
+.drom-menu__col {
+	width: 25%;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: -5px;
+	padding: 0 40px;
+}
+.drom-menu__col h3 {
+	border-bottom: 3px solid #f36f21;
+	margin: 0 0 16px;
+	padding: 0 0 22px;
+}
+.drop-menu__list {
+	margin-bottom: 40px;
+}
+.drop-menu__item {
+	list-style-type: none;
+}
+.drop-menu__title {
+	font-family: 'HeliosCond', sans-serif;
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: 400;
+	padding: 0;
+	
+}
+.drop-menu__link {
+	font-family: 'FiraSans', sans-serif;
+	font-size: 14px;
+	font-weight: 350;
+	line-height: 35px;
+}
+.drop-menu__link:hover {
+	text-decoration: underline;
+}
+
+
+
+/* DROP MENU */
 
 /*
 ================================================================================
@@ -2825,6 +2881,18 @@ footer{
 	}
 	.defolt-form .box-fields .input-wrap_name {
 	    width: 28.8%;
+	}
+
+
+	.menu__tab-cont {
+		width: calc(100% + 40px);
+		margin: 0 -20px;
+	}
+	.drom-menu__col {
+		padding: 0 20px;
+	}
+	.drop-menu__list {
+		margin-bottom: 30px;
 	}
 
 }
