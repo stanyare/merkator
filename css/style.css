@@ -2410,7 +2410,6 @@ vertical-align: middle;
 	font-size: 16px;
 	padding: 20px;
 	box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.2);
-	ba
 }
 /* END FORM TO */
 
@@ -3203,18 +3202,19 @@ footer{
 	header .wrapper{
 		padding-right: 30px;
 	}
-	.box-lang{
-		width: 90px;
-	}
+
 	.button-nav{
 		display: block;
-		float: right;
-		margin-top: 25px;
+		position: absolute;
+	    top: 0;
+		margin-top: 30px;
 	}
 	.logo{
 		padding-top: 20px;
 		padding-bottom: 20px;
+		margin-left: 40px;
 	}
+
 	.opened-block-nav{
 		display: none;
 		position: absolute;
@@ -3230,29 +3230,59 @@ footer{
 	}
 	.main-nav{
 		margin: 0 0 0 0;
-		padding: 0 20px 0 20px;
+		padding: 0;
 		text-align: left;
 	}
 	.main-nav-list{
-		padding-top: 20px;
-		padding-bottom: 20px;
+/* 		padding-top: 20px;
+padding-bottom: 20px; */
 	}
 	.main-nav-list__item{
-		width: 50%;
-		margin: 0 -5px 10px 0;
+		width: 100%;
+		background: #f2f2f2;
+		padding: 0px 20px;
+		border-bottom: 1px solid #d9d9d9;
+	}
+	.main-nav-list__item.active {
+	    border-top: 3px solid transparent;
+	}
+	.main-nav-list__link {
+		position: relative;
+		padding: 30px 0px;
+	}
+	.main-nav-list__link:before {
+		content: "";
+		display: block;
+		width: 16px;
+		height: 16px;
+		background: url('../img/+_icon.png') no-repeat;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		margin-top: -8px;
 	}
 	.box-lang{
-		position: static;
-		width: 50%;
-		display: inline-block;
-		vertical-align: top;
-		height: 90px;
+		top: 0px;
+		right: 20px;
+    	height: 83px;
+    	width: initial;
+    	padding-top: 30px;
 	}
-	.box-lang__link{
-		padding-top: 27px;
+	.box-lang__link {
+	    display: block;
+	    width: 100%;
+	    height: initial;
+	    padding: 0;
+	    text-align: right;
+	    font-size: 18px;
+	    line-height: 24px;
+	    font-weight: 700;
+	    color: #cccccc;
+	    font-family: 'Helios';
+	    background: transparent;
 	}
 	.box-search{
-		width: 50%;
+		width: 100%;
 		display: inline-block;
 		vertical-align: top;
 		height: 90px;
@@ -4012,11 +4042,6 @@ footer{
 	.wrapper{
 		padding-left: 15px;
 		padding-right: 15px;
-	}
-	
-	.button-nav {
-	    position: absolute;
-	    top: 0;
 	}
 	.logo {
 	    float: none;
