@@ -56,7 +56,7 @@ $(function(){
 			infinite: true,
 			dots: false,
 			autoplay: true,
-			autoplaySpeed: 5000,
+			autoplaySpeed: 50000,
 			speed: 400,
 			slidesToShow: 1,
 			slidesToScroll: 1,
@@ -64,7 +64,7 @@ $(function(){
 			pauseOnHover:false,
 			responsive: [
 			{
-			  breakpoint: 640,
+			  breakpoint: 501,
 			  settings: {
 				dots: true,
 				arrows: false			
@@ -134,14 +134,7 @@ $(function(){
 			  breakpoint: 1201,
 			  settings: {
 				slidesToShow: 1,
-				slidesToScroll: 1				
-			  }
-			},
-			{
-			  breakpoint: 750,
-			  settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1				
+				slidesToScroll: 1,			
 			  }
 			}	
 		  ]
@@ -332,6 +325,32 @@ $(function(){
 	};
 	/* product slider */
 
+	/* advantages slider */		
+	if($('.js-adv-slider').length){
+		var $numberMain = $('.number-main-slide');
+		var $slickMain = $('.js-adv-slider');
+
+		/*$slickMain.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {			
+			var i = (currentSlide ? currentSlide : 0) + 1;
+			$numberMain.text(i + '/' + slick.slideCount);
+		});*/
+	
+		$slickMain.slick({
+			infinite: true,
+			dots: false,
+			autoplay: true,
+			autoplaySpeed: 5000,
+			speed: 400,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			fade: true,
+			pauseOnHover:false,
+			
+		});
+		
+	};
+	/* advantages slider */
+
 	/*tabs*/
 	$('.tabs li a').click(function(){
     	$(this).parents('.tab-wrap').find('.tab-cont').addClass('hide-tab');
@@ -451,7 +470,7 @@ var handler = function(){
 	var viewport_wid = viewport().width;
 	if (viewport_wid > 1200) {
 		$('.col-inf_1, .col-inf_3').height(height_col);
-	} else if (viewport_wid <= 1200){
+	} else if (viewport_wid <= 1200 && viewport_wid > 640 ){
 		$('.col-inf_1').height(height_col);
 	}
 	
