@@ -2676,6 +2676,9 @@ vertical-align: middle;
 	display: block;
 }
 .drop-menu__title:hover {
+	color: #f36f21;
+}
+.drop-menu__list .drop-menu__title:hover {
 	text-decoration: underline;
 }
 .drop-menu__link {
