@@ -439,23 +439,17 @@ $(function(){
 	/*error*/
 
 	/*menu*/
-	$('.js-menu_link').mouseenter(function(){
-    	$(this).parents('header').find('.menu__tab-cont').addClass('hide-tab');
-    	$(this).parent().siblings().removeClass('active');
-    	var id = $(this).attr('href');
-    	$(id).removeClass('hide-tab');
-    	$(this).parent().addClass('active');
-	   return false;
-	});
-	$('.js-menu_link').mouseleave(function(){
-		$(this).parent('.main-nav-list__item').removeClass('active');
-	});
-	  $(document).click(function(event) {
-	    if ($(event.target).closest(".menu__tab-cont").length) return;
-	    $(".menu__tab-cont").addClass('hide-tab');
-	    event.stopPropagation();
-	  });
+		$(".js-menu_link").on('click', function(){
+			$(this).parent().siblings().removeClass('open-submenu');
+			$(this).parent().toggleClass('open-submenu');
+		});
+		$(".js-menu_link1").on('click', function(){
+			$(this).parent().siblings().removeClass('open-submenu1');
+			$(this).parent().toggleClass('open-submenu1');
+		});
 	/*menu*/
+	
+	
 
 });
 
@@ -468,6 +462,7 @@ var handler = function(){
 	var height_col = $('.col-inf_2').height();
 
 	var viewport_wid = viewport().width;
+
 	if (viewport_wid > 1200) {
 		$('.col-inf_1, .col-inf_3').height(height_col);
 	} else if (viewport_wid <= 1200 && viewport_wid > 640 ){
@@ -477,10 +472,31 @@ var handler = function(){
 	var widthNav = $('.main-nav-list').width();
 	$('.search-form').width(widthNav-38);
 	
-	
+
+	/*menu*/
+	if (viewport_wid >= 992) {  
+		$('.main-nav-list__item').mouseenter(function(){
+	    	$(this).siblings().removeClass('active');
+	    	$(this).addClass('active');
+		   return false;
+		});
+		$('.main-nav-list__item').mouseleave(function(){
+			$(this).parent().removeClass('active');
+		});
+		  $(document).click(function(event) {
+		    if ($(event.target).closest(".box-submenu").length) return;
+		    $(".box-submenu").parent().removeClass('active');
+		    event.stopPropagation();
+		  });
+	}
+	/*menu*/
 	
 	if (viewport_wid <= 991) {
-		
+		/*$('.drop-menu__list').hide();*/
+			$(".main-nav ul li").each(function(){    
+			    var offsetLeft = $(this).offset().left;     
+			    $(this).find('.box-submenu').css({'left': -offsetLeft, 'width': viewport_wid});
+			});
 	}
 	
 }
