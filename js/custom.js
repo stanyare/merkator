@@ -476,11 +476,13 @@ var handler = function(){
 	/*menu*/
 	if (viewport_wid >= 992) {  
 		$('.main-nav-list__item').mouseenter(function(){
+			$('header').addClass('opened');
 	    	$(this).siblings().removeClass('active');
 	    	$(this).addClass('active');
 		   return false;
 		});
 		$('.main-nav-list__item').mouseleave(function(){
+			$('header').removeClass('opened');
 			$(this).parent().removeClass('active');
 		});
 		  $(document).click(function(event) {
