@@ -2656,16 +2656,19 @@ vertical-align: middle;
 	margin: 0 -40px;
 }
 .submenu__col {
-	width: 25%;
 	display: inline-block;
 	vertical-align: top;
 	margin-right: -5px;
 	padding: 0 40px;
 }
-.submenu__col h3 {
-	
-	
+.submenu__col-25 {
+	width: 25%;
+
 }
+.submenu__col-33 {
+	width: 33.3333%;
+}
+
 .submenu__list {
 	margin: 0 -20px 0px;
 }
@@ -3004,6 +3007,9 @@ footer{
 	.priority__list {
 	    margin: 0 -10px 60px;
 	}
+	.submenu__col-33 {
+	    width: 50%;
+	}
 }
 
 @media screen and (min-width:1201px){
@@ -3239,7 +3245,7 @@ footer{
 		width: 100%;
 	    max-width: 250px;
 	}
-	.submenu__col {
+	.submenu__col-25 {
 	    width: 50%;
 	}
 }
