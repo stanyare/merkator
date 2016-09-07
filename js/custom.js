@@ -483,7 +483,6 @@ var handler = function(){
 		});
 		$('.main-nav-list__item').mouseleave(function(){
 			$('header').removeClass('opened');
-			$(this).parent().removeClass('active');
 		});
 		  $(document).click(function(event) {
 		    if ($(event.target).closest(".box-submenu").length) return;
