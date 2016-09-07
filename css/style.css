@@ -357,14 +357,14 @@ header .wrapper{
 	-moz-transform:rotate(-45deg);
 	-o-transform:rotate(-45deg);
 	position:absolute;
-	left:0;top:14px; 
+	left:0;top:10px; 
 	margin: 0 0 0 0;}
 .button-nav.active  span:last-child{
 	-webkit-transform:rotate(45deg);
 	-moz-transform:rotate(45deg);
 	-o-transform:rotate(45deg);
 	position:absolute;
-	right:0;top:14px; 
+	right:0;top:10px; 
 	margin: 0 0 0 0;}
 
 
