@@ -476,10 +476,6 @@ $(function(){
 		});
 	/*menu*/
 
-
-	
-	
-
 });
 
 var handler = function(){
@@ -523,11 +519,71 @@ var handler = function(){
 	
 	if (viewport_wid <= 991) {
 		/*$('.drop-menu__list').hide();*/
-			$(".main-nav ul li").each(function(){    
-			    var offsetLeft = $(this).offset().left;     
-			    $(this).find('.box-submenu').css({'left': -offsetLeft, 'width': viewport_wid});
+		$(".main-nav ul li").each(function(){    
+		    var offsetLeft = $(this).offset().left;     
+		    $(this).find('.box-submenu').css({'left': -offsetLeft, 'width': viewport_wid});
+		});
+	};
+
+	/* category slider */
+	if (viewport_wid <= 640) {
+		if($('.js-category').length){
+		var $numberNews = $('.numbers-news');
+		var $slickNews = $('.js-category');
+
+		var viewport_wid = viewport().width;
+			
+		if (viewport_wid > 1200) {
+			$slickNews.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+				//currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+				var i = (currentSlide ? currentSlide : 0) + 2;
+				$numberNews.text(i + ' / ' + slick.slideCount);
 			});
+		} else{
+			$slickNews.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+				//currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+				var i = (currentSlide ? currentSlide : 0) + 1;
+				$numberNews.text(i + ' / ' + slick.slideCount);
+			});
+		}
+		
+		var handlerNewsSlider = function(){
+	
+			var viewport_wid = viewport().width;
+			
+			if (viewport_wid > 1200) {
+				$slickNews.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+					//currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+					var i = (currentSlide ? currentSlide : 0) + 2;
+					$numberNews.text(i + ' / ' + slick.slideCount);
+				});
+			} else{
+				$slickNews.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+					//currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+					var i = (currentSlide ? currentSlide : 0) + 1;
+					$numberNews.text(i + ' / ' + slick.slideCount);
+				});
+			}
+		}
+		$(window).bind('load', handlerNewsSlider);
+		$(window).bind('resize', handlerNewsSlider);
+		
+		$slickNews.slick({
+		    infinite: true,
+			dots: false,
+			autoplay: false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: true,
+			draggable: false
+		});
+		};
+		
+	}else{
+		$('.js-category').slick('unslick');
 	}
+	/* category slider */
+
 	
 }
 $(window).bind('load', handler);

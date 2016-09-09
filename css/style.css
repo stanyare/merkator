@@ -2452,6 +2452,9 @@ vertical-align: middle;
 /* END FORM TO */
 
 /* CATEGORY */
+.box-category-list {
+	position: relative;
+}
 .category__list {
 	margin-right: -11px;
 	margin-left: -11px;
@@ -3365,6 +3368,12 @@ footer{
 	.tab-advantages__link {
 	    height: 280px;
 	}
+	.category__cont:hover .category__link:before {
+		display:none;
+	}
+	.category__link {
+	    padding: 20px 36px 20px 36px;
+	}
 }
 
 @media screen and (min-width:992px){
@@ -4002,9 +4011,7 @@ padding-bottom: 20px; */
 }
 
 @media screen and (min-width:641px){
-	.sx-hide {
-		display: inline-block;
-	}
+
 	.sx-show {
 		display: none;
 	}
@@ -4268,6 +4275,11 @@ padding-bottom: 20px; */
     text-align: center;
     font-size: 26px;
 } */
+
+	.up-link {
+		display: none;
+	}
+
 	.place__item img {
 	    margin: 20px auto 34px;
 	    width: 143px;
@@ -4278,6 +4290,58 @@ padding-bottom: 20px; */
 	.partners__item {
 	    height: 75px;
 	}
+	.category__cont {
+	    height: 405px;
+	}
+	.category__item {
+	    padding: 22px 0px 0 0;
+	    margin-right: 0px;
+	}
+	.category__list {
+	    margin:0 -10px -20px -10px;
+	    padding-bottom: 0px;
+	}
+	.category__list .slick-arrow {
+	    bottom: 30px;
+	    top: initial;
+	    background: url(../img/icon_list.png) no-repeat left 0px;
+	    z-index: 33;
+	}
+	.category__list .slick-next {
+		right: 50%;
+	    left: initial;
+	    margin-right: -70px;
+	}
+	.category__list .slick-prev {
+		left: 50%;
+		margin-left: -70px;
+	}
+	.category__cont:hover:before {
+		content: "";
+		display: none;
+	}
+	.category__cont:hover .category__link {
+		background-color: initial;
+	}
+	.box-category{
+		margin-top: -20px;
+	}
+	.box-category .numbers-news {
+		top: initial;
+		bottom: 30px;
+		color: #fff;
+		z-index: 32;
+		font-size: 18px;
+		font-weight: 400;
+		text-shadow: none;
+	}
+	.category__link {
+	    font-size: 24px;
+	    line-height: 34px;
+	    top: 0;
+	    padding: 20px 50px 20px 30px;
+	}
+
 }
 
 @media screen and (min-width:500px){
@@ -4474,10 +4538,7 @@ padding-bottom: 20px; */
 	.category__item {
 	    width: 100%;
 	}
-	.category__link {
-	    font-size: 24px;
-	    line-height: 34px;
-	}
+
 	.project__item {
 		width: 100%;
 	}
@@ -4557,7 +4618,7 @@ padding-bottom: 20px; */
 	.box-about h1 {
 		display: none;
 	}
-	.box-about h2 {
+	.box-about h2, .box-category h1 {
 		background-color: #f2f2f2;
 		margin: 0 -10px 17px;
 		text-align: center;
