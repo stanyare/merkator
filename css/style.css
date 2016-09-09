@@ -245,13 +245,11 @@ header .wrapper{
 }
 
 .box-submenu {
-	height: 0;
 	display: none;
 	position: absolute;
 	left: 0;
 	top: 120px;
 	background: #f2f2f2;
-    list-style-type: none;
     text-align: left;
     width: 100%;
     padding: 35px 20px 25px;
@@ -2762,6 +2760,20 @@ vertical-align: middle;
 	text-decoration: underline;
 }
 
+.sx-list {
+    width: 100%;
+    background: #f36f21;
+    padding: 0 15px;
+}
+.sx-list .list__item {
+	background: #f36f21;
+	padding: 15px 0 15px 40px;
+}
+.sx-list .list__item a{
+	color: #fff;
+	text-transform: uppercase;
+}
+
 /* DROP MENU */
 
 
@@ -4015,6 +4027,9 @@ padding-bottom: 20px; */
 	.sx-show {
 		display: none;
 	}
+	.sx-list {
+		display: none;
+	}
 /* 	.partners-slider__list {
 	display: none;
 } */
@@ -4344,12 +4359,6 @@ padding-bottom: 20px; */
 
 }
 
-@media screen and (min-width:500px){
-	.sx-list {
-		display: none;
-	}
-}
-
 @media screen and (max-width:500px){
 	p {
 	    font-size: 14px;
@@ -4543,13 +4552,6 @@ padding-bottom: 20px; */
 		width: 100%;
 	}
 
-	.sx-list__item {
-		background: #f36f21;
-	}
-	.sx-list__item a{
-		color: #fff;
-		text-transform: uppercase;
-	}
 	.footer-col-nav {
 	    padding: 5px 25px 10px 0;
 	}
