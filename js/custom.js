@@ -56,7 +56,7 @@ $(function(){
 			infinite: true,
 			dots: false,
 			autoplay: true,
-			autoplaySpeed: 50000,
+			autoplaySpeed: 5000,
 			speed: 400,
 			slidesToShow: 1,
 			slidesToScroll: 1,
@@ -438,16 +438,45 @@ $(function(){
 	});
 	/*error*/
 
+	/* partners slider */		
+	if($('.js-partners-slider').length){
+		$('.js-partners-slider').slick({
+			infinite: false,
+			dots: false,
+			autoplay: false,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			arrows: false,
+			draggable: false,
+			responsive: [
+			{
+			  breakpoint: 641,
+			  settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				dots: true,		
+			  }
+			}]
+		});
+		
+	};
+	/* partners slider */	
+
+
 	/*menu*/
-		$(".js-menu_link").on('click', function(){
+		$(".js-menu_link").on('click', function(e){
+			e.preventDefault();
 			$(this).parent().siblings().removeClass('open-submenu');
 			$(this).parent().toggleClass('open-submenu');
 		});
-		$(".js-menu_link1").on('click', function(){
+		$(".js-menu_link1").on('click', function(e){
+			e.preventDefault();
 			$(this).parent().siblings().removeClass('open-submenu1');
 			$(this).parent().toggleClass('open-submenu1');
 		});
 	/*menu*/
+
+
 	
 	
 
