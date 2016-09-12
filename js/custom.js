@@ -74,11 +74,13 @@ $(function(){
 		});
 		
 	};
-	/* main slider */	
+	/* main slider */
+	
+	
 	
 	/* news slider */	
 	if($('.js-news').length){
-		var $numberNews = $('.numbers-news');
+		var $numberNews = $('.box-news .numbers-news');
 		var $slickNews = $('.js-news');
 
 		var viewport_wid = viewport().width;
@@ -528,7 +530,7 @@ var handler = function(){
 	/* category slider */
 	if (viewport_wid <= 640) {
 		if($('.js-category').length){
-		var $numberNews = $('.numbers-news');
+		var $numberNews = $('.box-category-list .numbers-news');
 		var $slickNews = $('.js-category');
 
 		var viewport_wid = viewport().width;
@@ -583,7 +585,96 @@ var handler = function(){
 		$('.js-category').slick('unslick');
 	}
 	/* category slider */
+	
+	
+	/* subcategory slider */
+	if (viewport_wid <= 640) {
+		if($('.js-subcategory').length){
+			var $numberNews = $('.box-subcategory .numbers-news');
+			var $slickNews = $('.js-subcategory');
 
+			$slickNews.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+				//currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+				var i = (currentSlide ? currentSlide : 0) + 1;
+				$numberNews.text(i + ' / ' + slick.slideCount);
+			});
+
+			$slickNews.slick({
+				infinite: true,
+				dots: false,
+				autoplay: false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: true,
+				draggable: false
+			});
+		};
+		
+	}else{
+		$('.js-category').slick('unslick');
+	};
+	/* subcategory slider */
+	
+	if (viewport_wid <= 1080) {
+		/* tab slider */		
+		if($('.js-tab-list').length){		
+			var $slickTab = $('.js-tab-list');
+
+			$slickTab.slick({
+				infinite: true,
+				dots: false,
+				autoplay: false,
+				autoplaySpeed: 5000,
+				speed: 400,
+				arrows: true,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				pauseOnHover:false				
+			});
+				
+		};
+		/* tab slider */
+	} else{
+		/* tab slider */		
+		if($('.js-tab-list').length){		
+			var $slickTab = $('.js-tab-list');
+
+			$slickTab.slick('unslick');
+		};
+		/* tab slider */
+	}
+
+	
+	/* advantages slider */
+	if (viewport_wid <= 640) {
+		if($('.js-advantages-tab').length){
+			var $numberNews = $('.advantages-num .numbers-news');
+			var $slickNews = $('.js-advantages-tab');
+
+			$slickNews.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+				//currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+				var i = (currentSlide ? currentSlide : 0) + 1;
+				$numberNews.text(i + ' / ' + slick.slideCount);
+			});
+
+			$slickNews.slick({
+				infinite: true,
+				dots: false,
+				autoplay: false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: true,
+				draggable: false
+			});
+		};
+		
+	}else{
+		$('.js-advantages-tab').slick('unslick');
+	}
+	/* advantages slider */
+	
+	
+	
 	
 }
 $(window).bind('load', handler);

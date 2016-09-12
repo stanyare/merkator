@@ -18,8 +18,8 @@
 <div class="main-wrapper">
 
 <!-- BEGIN CONTENT -->
-	<main class="content" id="top">
-		<div class="box-bread-crumbs">
+	<main class="content box-forms-order" id="top">
+		<div class="box-bread-crumbs sx-hide">
 		     	<ul class="bread-crambs">
 	            	<li class="bread-crambs__item">
 	                    <a href="#" class="bread-crambs__link">Главная</a>
@@ -30,7 +30,7 @@
 	            	<li class="bread-crambs__item">Заявка на ТО и Ремонт</li>
 		     	</ul>
 		   </div>
-		<aside>
+		<aside class="sx-hide">
 			<ul class="aside__list">
 				<li class="aside__item active js-item"><a href="#" class="aside__link"><span class="aside__arrow-wrap">О компании<span class="aside__arrow"></span></span></a>
 					<ul class="aside__list aside__list_sub js-sub-list">
@@ -60,7 +60,7 @@
 				</div>
 				<div class="tab-wrap">
 					<div class="nav-tab-list-wrap">
-				     	<ul class="nav-tab-list tabs">
+				     	<ul class="nav-tab-list js-tab-list tabs">
 		     	        	<li class="nav-tab-list__item active">
 		                	    <a href="#tab_1" class="nav-tab-list__link"><span>Онлайн-заявка</span></a>
 		     	        	</li>
@@ -80,7 +80,7 @@
 				            		<div class="box-field">
 				            			<label class="label">Наименование организации</label>
 										<div class="box-field__input-wrap">
-											<input type="text" class="box-field__input">
+											<input type="text" placeholder="Наименование организации" class="box-field__input">
 											<span class="error js-error">Введите наименование организации</span>
 										</div>
 									</div>
@@ -88,10 +88,10 @@
 									<div class="box-field box-field_groupe">
 										<label class="label">№ договора</label>
 										<div class="box-field__input-wrap box-field__input-wrap_left">
-											<input type="text" class="box-field__input">
+											<input type="text" placeholder="№ договора" class="box-field__input">
 										</div>
 										<div class="box-field__input-wrap box-field__input-wrap_date box-field__input-wrap_date-min">
-											<input type="text" class="box-field__input datepicker">
+											<input type="text" placeholder="Дата договора" class="box-field__input datepicker">
 											<span class="calendar js-calendar"></span>
 										</div>
 									</div>
@@ -99,35 +99,35 @@
 									<div class="box-field">
 										<label class="label">Номер гарантийного письма (если есть)</label>
 										<div class="box-field__input-wrap">
-											<input type="text" class="box-field__input">
+											<input type="text" placeholder="Номер гарантийного письма (если есть)" class="box-field__input">
 										</div>
 									</div>
 									
 									<div class="box-field">
 										<label class="label">Вид работ</label>
 										<div class="box-field__input-wrap">
-											<input type="text" class="box-field__input">
+											<input type="text" placeholder="Вид работ" class="box-field__input">
 										</div>
 									</div>
 
 									<div class="box-field">
 										<label class="label">Наименование спец. машины</label>
 										<div class="box-field__input-wrap">
-											<input type="text" class="box-field__input">
+											<input type="text" placeholder="Наименование спец. машины" class="box-field__input">
 										</div>
 									</div>
 
 									<div class="box-field">
 										<label class="label">VIN номер</label>
 										<div class="box-field__input-wrap">
-											<input type="text" class="box-field__input">
+											<input type="text" placeholder="VIN номер" class="box-field__input">
 										</div>
 									</div>
 
 									<div class="box-field">
 										<label class="label">Наработка машиниы/оборудования</label>
 										<div class="box-field__input-wrap box-field__input-wrap_moto">
-											<input type="text" class="box-field__input">
+											<input placeholder="Наработка машиниы/оборудования" type="text" class="box-field__input">
 											<span>М/Ч</span>
 										</div>
 									</div>
@@ -135,7 +135,7 @@
 									<div class="box-field box-field_textarea">
 										<label class="label">Описание неисправности</label>
 										<div class="box-field__input-wrap">
-											<textarea class="box-field__textarea"></textarea>
+											<textarea placeholder="Описание неисправности" class="box-field__textarea"></textarea>
 										</div>
 									</div>
 
@@ -146,17 +146,19 @@
 									<div class="box-field">
 										<label class="label">Контактное лицо</label>
 										<div class="box-field__input-wrap">
-											<input type="text" class="box-field__input">
+											<input type="text" placeholder="Контактное лицо" class="box-field__input">
 										</div>
 									</div>
 
 									<div class="box-field">
 										<label class="label">Контактный телефон</label>
 										<div class="box-field__input-wrap">
-											<input type="text" class="box-field__input">
+											<input type="text" placeholder="Контактный телефон" class="box-field__input">
 										</div>
-									</div>								
-									<input type="submit" value="ОТПРАВИТЬ" class="button button_block">
+									</div>
+									<div class="box-form-button">									
+										<input type="submit" value="ОТПРАВИТЬ" class="button button_block">
+									</div>
 								</div>
 			            	</form>
 			            </div>
@@ -182,19 +184,21 @@
 									<div class="box-field">
 										<label class="label">Контактное лицо</label>
 										<div class="box-field__input-wrap">
-											<input type="text" class="box-field__input">
-											<span class="error js-error">Введите имя контактного лица</span>
+											<input type="text" placeholder="Контактное лицо" class="box-field__input">
+											<span class="error js-error" style="display:none;">Введите имя контактного лица</span>
 										</div>
 									</div>
 
 									<div class="box-field">
 										<label class="label">Контактный телефон</label>
 										<div class="box-field__input-wrap">
-											<input type="text" class="box-field__input">
-											<span class="error js-error">Введите контактный телефон</span>
+											<input type="text" placeholder="Контактный телефон" class="box-field__input">
+											<span class="error js-error" style="display:none;">Введите контактный телефон</span>
 										</div>
-									</div>								
-									<input type="submit" value="ОТПРАВИТЬ" class="button button_block">
+									</div>
+									<div class="box-form-button">							
+										<input type="submit" value="ОТПРАВИТЬ" class="button button_block">
+									</div>	
 								</div>
 			            	</form>
 			            </div>
@@ -381,10 +385,12 @@
 					</div>
 
 					<ul class="sx-list">
-						<li class="list__item"><a href="#">Заявка на запасные части</a></li>
-						<li class="list__item"><a href="#">Заявка на ТО и ремонт</a></li>
-						<li class="list__item"><a href="#">Гарантийный случай</a></li>
+						<li class="sx-list__item"><a href="#">Заявка на запасные части</a></li>
+						<li class="sx-list__item"><a href="#">Заявка на ТО и ремонт</a></li>
+						<li class="sx-list__item"><a href="#">Гарантийный случай</a></li>
 					</ul>
+					
+				</nav>
 				
 			</div>
 			<div class="box-lang">
@@ -396,85 +402,88 @@
 <!-- HEADER EOF   -->
 
 <!-- BEGIN FOOTER -->	
-	
+
 	<footer>
 		<a href="#top" class="up-link js-up"><span class="arrow-up"></span></a>
 		<div class="wrapper">
 			<div class="footer-top">
-				<div class="footer-col-nav">
-					<div class="footer-title"><a href="#">О Холдинге</a></div>
-					<ul class="footer-nav">
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">О компании</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Структура управления</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Обращение президента компании</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Завод "Меркатор-Калуга"</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Программа локализации</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Работа в  Меркатор</a>
-						</li>
-					</ul>
+				<div class="footer-col-wrap">
+					<div class="footer-col-nav footer-col-nav_1">
+						<div class="footer-title"><a href="#">О Холдинге</a></div>
+						<ul class="footer-nav">
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">О компании</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Структура управления</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Обращение президента компании</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Завод "Меркатор-Калуга"</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Программа локализации</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Работа в  Меркатор</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-col-nav footer-col-nav_2">
+						<div class="footer-title"><a href="#">Техника</a></div>
+						<ul class="footer-nav">
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Коммунальная техника</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Техника для ремонта дорог</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Дополнительное оборудование</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Промышленные предприятия</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Обращение с отходами</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Техника в наличии</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-col-nav footer-col-nav_3">
+						<div class="footer-title"><a href="#">СЕРВИС</a></div>
+						<ul class="footer-nav">
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">О сервисной службе</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Структура</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Заявка на ТО и ремонт</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Уведомить о неисправности</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Срочная техническая помощь</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Контакты сервисной службы</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-col-nav footer-col-nav_4">
+						<div class="footer-title"><a href="#">Запасные части</a></div>
+						<div class="footer-title"><a href="#">Новости</a></div>
+						<div class="footer-title"><a href="#">Контакты</a></div>
+					</div>
 				</div>
-				<div class="footer-col-nav footer-col-nav_2">
-					<div class="footer-title"><a href="#">Техника</a></div>
-					<ul class="footer-nav">
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Коммунальная техника</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Техника для ремонта дорог</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Дополнительное оборудование</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Промышленные предприятия</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Обращение с отходами</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Техника в наличии</a>
-						</li>
-					</ul>
-				</div>
-				<div class="footer-col-nav footer-col-nav_3">
-					<div class="footer-title"><a href="#">СЕРВИС</a></div>
-					<ul class="footer-nav">
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">О сервисной службе</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Структура</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Заявка на ТО и ремонт</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Уведомить о неисправности</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Срочная техническая помощь</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Контакты сервисной службы</a>
-						</li>
-					</ul>
-				</div>
-				<div class="footer-col-nav footer-col-nav_4">
-					<div class="footer-title"><a href="#">Запасные части</a></div>
-					<div class="footer-title"><a href="#">Новости</a></div>
-					<div class="footer-title"><a href="#">Контакты</a></div>
-				</div>
+				
 				<div class="footer-col-nav footer-col-nav_contact">
 					<div class="footer-tel">
 						<a href="tel:88005054040">8 800 505 40 40</a>		
@@ -508,7 +517,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="footer-col-nav footer-col-nav_contact">
+				<div class="footer-col-nav footer-col-nav_contact footer-col-bottom-dev">
 					<div class="footer-developer">
 						<div class="footer-developer__text">Разработка сайта</div>
 						<a href="#"><img src="img/defa.png" alt=""></a>
@@ -517,6 +526,7 @@
 			</div>
 		</div>	
 	</footer>
+	
 	
 <!-- FOOTER EOF   -->
 

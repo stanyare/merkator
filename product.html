@@ -17,8 +17,8 @@
 <div class="main-wrapper">
 
 <!-- BEGIN CONTENT -->
-	<main class="content" id="top">
-		<div class="box-bread-crumbs">
+	<main class="content box-category" id="top">
+		<div class="box-bread-crumbs sx-hide">
 		     	<ul class="bread-crambs">
 	            	<li class="bread-crambs__item">
 	                    <a href="#" class="bread-crambs__link">Главная</a>
@@ -32,7 +32,7 @@
 	            	<li class="bread-crambs__item">Подметальные машины и оборудование</li>
 		     	</ul>
 		   </div>
-		<aside>
+		<aside class="sx-hide">
 			<ul class="aside__list">
 				<li class="aside__item active js-item"><a href="#" class="aside__link"><span class="aside__arrow-wrap">коммунальная техника<span class="aside__arrow"></span></span></a>
 					<ul class="aside__list aside__list_sub js-sub-list">
@@ -56,21 +56,20 @@
 		</aside>
 		<div class="inner-cont">
 			
-			<div class="box-slider box-slider_product">
+			<div class="box-slider box-slider_product">				
+				<div class="slider-wrap js-product">
+					<div class="box-slider__item" style="background-image:url(img/product_slide_1.jpg)">
+						
+					</div>
+					<div class="box-slider__item" style="background-image:url(img/product_slide_1.jpg)">
+						
+					</div>
+				</div>
 				<div class="slider-description">
 					<div class="slider-description-text">
 						<div class="slider-description-text__cont">
 							<div class="slide-title">Самоходная<br/>подметально-вакуумная<br/>машина ВКМ-1000 (1 м3)</div>
 						</div>
-					</div>
-				</div>
-				<div class="slider-wrap js-product">
-
-					<div class="box-slider__item" style="background-image:url(img/product_slide_1.jpg)">
-						
-					</div>
-					<div class="box-slider__item" style="background-image:url(img/product_slide_1.jpg)">
-						
 					</div>
 				</div>
 			</div>
@@ -134,9 +133,9 @@
 
 			</section>
 
-			<div class="tab-wrap tab-wrap_adv">
+			<div class="tab-wrap tab-wrap_white tab-wrap_adv">
 				<div class="nav-tab-list-wrap">
-			     	<ul class="nav-tab-list tabs">
+			     	<ul class="nav-tab-list js-tab-list tabs">
 	     	        	<li class="nav-tab-list__item active">
 	                	    <a href="#tab_1" class="nav-tab-list__link"><span>Преимущества</span></a>
 	     	        	</li>
@@ -153,7 +152,8 @@
 			    </div>
 		     	<div class="box-tab-cont">
 		            <div class="tab-cont" id="tab_1">
-		            	<ul class="tab-advantages__list">
+		            
+		            	<ul class="tab-advantages__list js-advantages-tab">
 
 		            		<li class="tab-advantages__item">
 		            			<div class="tab-advantages__img">
@@ -191,7 +191,10 @@
 		            			</div>
 		            		</li>
 		            	</ul>
-		            	<div class="box-tab-link">
+		            	<div class="advantages-num sx-show">
+		            		<div class="numbers-news"></div>
+		            	</div>
+		            	<div class="box-tab-link sx-hide">
 		            		<a href="#" class="tab-link__cont">Показать ещё оборудование</a>
 		            	</div>
 		            </div>
@@ -206,15 +209,15 @@
 					<form class="costing-form">
 						<div class="box-field">
 							<label class="hide-label">ВАШЕ ИМЯ</label>
-							<input type="text" class="form-control">
+							<input type="text" placeholder="ВАШЕ ИМЯ" class="form-control">
 						</div>
 						<div class="box-field">
 							<label class="hide-label">КОНТАКТНЫЙ ТЕЛЕФОН</label>
-							<input type="text" class="form-control">
+							<input type="text" placeholder="КОНТАКТНЫЙ ТЕЛЕФОН" class="form-control">
 						</div>
 						<div class="box-field">
 							<label class="hide-label">E-MAIL</label>
-							<input type="text" class="form-control">
+							<input type="text" placeholder="E-MAIL" class="form-control">
 						</div>
 						<div class="box-field box-field_submit">
 							<input type="submit" class="button button_block">
@@ -226,21 +229,23 @@
 					<div class="box-sales__photo">
 						<img src="img/sales_photo_1.jpg" alt="">
 					</div>
-					<div class="box-sales__name">
-						Юрий Вавилов
-					</div>
-					<div class="box-sales__position">
-						Консультант
-					</div>
-					<div class="box-sales__tel">
-						<a href="tel:+7(495)3089707">+7 (495) 308 97 07</a>
-					</div>
-					<div class="box-sales__mail">
-						<a href="mailto:vye@merkatorgroup.ru">vye@merkatorgroup.ru</a>
+					<div class="box-sales__text">
+						<div class="box-sales__name">
+							Юрий Вавилов
+						</div>
+						<div class="box-sales__position">
+							Консультант
+						</div>
+						<div class="box-sales__tel">
+							<a href="tel:+7(495)3089707">+7 (495) 308 97 07</a>
+						</div>
+						<div class="box-sales__mail">
+							<a href="mailto:vye@merkatorgroup.ru">vye@merkatorgroup.ru</a>
+						</div>
 					</div>
 				</div>
 			</section>
-			<div class="box-back">
+			<div class="box-back back_1000 sx-hide">
 				<div class="back-left">
 					<div class="back__text">Подметально-вакуумное<br/>оборудование BUCHER<br/>CityFant 6000</div>
 					<div class="back__img">
@@ -264,6 +269,9 @@
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="box-button-back sx-show">
+				<a href="#" class="button button_green">вернуться к списку техники</a>
 			</div>
 		</div>
 	</main>	
@@ -445,9 +453,9 @@
 					</div>
 
 					<ul class="sx-list">
-						<li class="list__item"><a href="#">Заявка на запасные части</a></li>
-						<li class="list__item"><a href="#">Заявка на ТО и ремонт</a></li>
-						<li class="list__item"><a href="#">Гарантийный случай</a></li>
+						<li class="sx-list__item"><a href="#">Заявка на запасные части</a></li>
+						<li class="sx-list__item"><a href="#">Заявка на ТО и ремонт</a></li>
+						<li class="sx-list__item"><a href="#">Гарантийный случай</a></li>
 					</ul>
 				
 			</div>
@@ -462,83 +470,85 @@
 <!-- BEGIN FOOTER -->	
 	
 	<footer>
-		<a href="#top" class="up-link js-up"><span class="arrow-up"></span></a>
 		<div class="wrapper">
 			<div class="footer-top">
-				<div class="footer-col-nav">
-					<div class="footer-title"><a href="#">О Холдинге</a></div>
-					<ul class="footer-nav">
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">О компании</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Структура управления</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Обращение президента компании</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Завод "Меркатор-Калуга"</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Программа локализации</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Работа в  Меркатор</a>
-						</li>
-					</ul>
+				<div class="footer-col-wrap">
+					<div class="footer-col-nav footer-col-nav_1">
+						<div class="footer-title"><a href="#">О Холдинге</a></div>
+						<ul class="footer-nav">
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">О компании</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Структура управления</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Обращение президента компании</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Завод "Меркатор-Калуга"</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Программа локализации</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Работа в  Меркатор</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-col-nav footer-col-nav_2">
+						<div class="footer-title"><a href="#">Техника</a></div>
+						<ul class="footer-nav">
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Коммунальная техника</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Техника для ремонта дорог</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Дополнительное оборудование</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Промышленные предприятия</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Обращение с отходами</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Техника в наличии</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-col-nav footer-col-nav_3">
+						<div class="footer-title"><a href="#">СЕРВИС</a></div>
+						<ul class="footer-nav">
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">О сервисной службе</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Структура</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Заявка на ТО и ремонт</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Уведомить о неисправности</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Срочная техническая помощь</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Контакты сервисной службы</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-col-nav footer-col-nav_4">
+						<div class="footer-title"><a href="#">Запасные части</a></div>
+						<div class="footer-title"><a href="#">Новости</a></div>
+						<div class="footer-title"><a href="#">Контакты</a></div>
+					</div>
 				</div>
-				<div class="footer-col-nav footer-col-nav_2">
-					<div class="footer-title"><a href="#">Техника</a></div>
-					<ul class="footer-nav">
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Коммунальная техника</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Техника для ремонта дорог</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Дополнительное оборудование</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Промышленные предприятия</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Обращение с отходами</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Техника в наличии</a>
-						</li>
-					</ul>
-				</div>
-				<div class="footer-col-nav footer-col-nav_3">
-					<div class="footer-title"><a href="#">СЕРВИС</a></div>
-					<ul class="footer-nav">
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">О сервисной службе</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Структура</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Заявка на ТО и ремонт</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Уведомить о неисправности</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Срочная техническая помощь</a>
-						</li>
-						<li class="footer-nav__item">
-							<a href="#" class="footer-nav__link">Контакты сервисной службы</a>
-						</li>
-					</ul>
-				</div>
-				<div class="footer-col-nav footer-col-nav_4">
-					<div class="footer-title"><a href="#">Запасные части</a></div>
-					<div class="footer-title"><a href="#">Новости</a></div>
-					<div class="footer-title"><a href="#">Контакты</a></div>
-				</div>
+				
 				<div class="footer-col-nav footer-col-nav_contact">
 					<div class="footer-tel">
 						<a href="tel:88005054040">8 800 505 40 40</a>		
@@ -572,7 +582,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="footer-col-nav footer-col-nav_contact">
+				<div class="footer-col-nav footer-col-nav_contact footer-col-bottom-dev">
 					<div class="footer-developer">
 						<div class="footer-developer__text">Разработка сайта</div>
 						<a href="#"><img src="img/defa.png" alt=""></a>
