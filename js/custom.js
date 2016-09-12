@@ -56,7 +56,7 @@ $(function(){
 			infinite: true,
 			dots: false,
 			autoplay: true,
-			autoplaySpeed: 5000,
+			autoplaySpeed: 50000,
 			speed: 400,
 			slidesToShow: 1,
 			slidesToScroll: 1,
@@ -321,7 +321,16 @@ $(function(){
 		  infinite: true,
 		  speed: 1000,
 		  slidesToShow: 1,
-		  slidesToScroll: 1
+		  slidesToScroll: 1,
+		 responsive: [
+			{
+			  breakpoint: 501,
+			  settings: {
+				dots: true,
+				arrows: false			
+			  }
+			}	
+		  ]
 
 		});
 	};
@@ -341,12 +350,13 @@ $(function(){
 			infinite: true,
 			dots: false,
 			autoplay: true,
-			autoplaySpeed: 5000,
+			autoplaySpeed: 50000,
 			speed: 400,
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			fade: true,
 			pauseOnHover:false,
+			draggable: false,
 			
 		});
 		
@@ -409,9 +419,13 @@ $(function(){
 	/*fancybox*/
 
 	/*datepicker*/
+
 	if($('.datepicker').length){
 	    $( ".datepicker" ).datepicker({
-		  dateFormat: "dd.mm.yy"
+		  dateFormat: "dd.mm.yy",
+		  monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+		 dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+		 firstDay: 1,
 		});
 		$('.js-calendar').on('click', function(){
 			$(this).parent().find('.datepicker').datepicker( "show" );
