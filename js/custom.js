@@ -388,29 +388,40 @@ $(function(){
 		});
 	/*menu*/
 
-	/*see more*/
-	$('.subcategory__item_hide').hide();
+	/* subcategory see more*/
 	$('.js-see-more').click(function(e){
 		e.preventDefault();
-		$('.subcategory__item_hide').slideToggle();
-		if($('.subcategory__item_hide').length){
+		$('.subcategory__item_hide').toggleClass('show').slideToggle();
+		if($('.subcategory__item_hide').is('.show')){
 			$(this).text('свернуть');
 		}else{
 			$(this).text('показать ещё');
 		}
 	});
-	/*see more*/
+	/* subcategory see more*/
 	/*see more text*/
 	$('.js-see-more-text').click(function(e){
 		e.preventDefault();
-		$(this).closest('.subcategory__item').find('.text-hide').slideToggle();
-		if($('.text-hide').length){
+		$(this).closest('.subcategory__item').toggleClass('show').find('.text-hide').slideToggle();
+		if($(this).closest('.subcategory__item').is('.show')){
 			$(this).text('свернуть');
 		}else{
 			$(this).text('показать ещё');
 		}
 	});
 	/*see more text*/
+
+	/* product see more*/
+	$('.js-more-prod').click(function(e){
+		e.preventDefault();
+		$('.tab-advantages__item_hide').toggleClass('show').slideToggle();
+		if($('.tab-advantages__item_hide').is('.show')){
+			$(this).text('свернуть');
+		}else{
+			$(this).text('Показать ещё оборудование');
+		}
+	});
+	/* product see more*/
 	
 
 });

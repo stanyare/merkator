@@ -1358,6 +1358,7 @@ aside{width:25.8%;float:left;position:relative;z-index:1;}
 .box-tab-cont{padding:40px 40px 37px;}
 .tab-advantages__list{border-bottom:1px solid #e6e6e6;}
 .tab-advantages__item{list-style-type:none;width:100%;margin-bottom:40px;}
+.tab-advantages__item_hide {display: none;}
 .tab-advantages__img{width:25.8%;margin-right:-5px;}
 .tab-advantages__img img{width:100%;}
 .tab-advantages__link, .subcategory__link, .project__link{display:block;position:relative;}
@@ -2059,6 +2060,7 @@ aside{width:100%;float:none;}
 .defolt-form_garanty {background-color: #f2f2f2;}
 .box-order-1, .box-order-2 {padding-bottom: 0px;}
 .box-order .box-tab-link { padding: 0px 0 40px;}
+.box-warranty { padding-bottom: 0px;}
 }
 @media screen and (min-width:641px){.sx-show{display:none;}
 }
