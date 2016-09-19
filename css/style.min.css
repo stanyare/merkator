@@ -2055,6 +2055,7 @@ aside{width:100%;float:none;}
 .label__text{text-align:center;margin:0 0 0 0;padding:20px 0 0 0;width:100%;}
 }
 @media screen and (min-width:641px){.sx-show{display:none;}
+.box-category .numbers-news {display: none;}
 }
 .number-slide-subcategory{display:none;height:40px;position:relative;}
 .number-slide-subcategory .numbers-news{left:50%;margin-left:-45px;top:10px!important;color:#000000!important;}
