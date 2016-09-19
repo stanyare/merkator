@@ -486,6 +486,7 @@ var handler = function(){
 	/* tab slider */
 	var $slickTab = $('.js-tab-list');
 	if (viewport_wid <= 1080) {
+		$('.js-tab-list .tab-cont').removeClass('hide-tab');
 		if($($slickTab).length){		
 			$slickTab.not('.slick-initialized').slick({
 				infinite: true,
